@@ -16,9 +16,16 @@
  */
 
 // TODO: Fix documentation
-/**
- * Load Core
- */
+// Load Core
 require_once( get_template_directory() . '/core/init.php' );
+
+// TODO: Fix documentation
+// Enqueue core scripts and core styles
+function response_scripts() {
+	global $post;
+
+	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/inc/css/theme.css', array('style'), '1.0' );	
+}
+add_action( 'wp_enqueue_scripts', 'response_scripts', 20 );
 
 // Theme specific functions will go here. This should be very limited

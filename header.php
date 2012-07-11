@@ -65,25 +65,32 @@
 	
 <?php do_action('response_before_header_container'); ?>
 
-<header id="masthead" class="container-fluid">
+<div id="masthead">
+	
+</div>
 
+<header>
 	<?php do_action('response_before_header'); ?>
 
+	<div class="container-fluid">
 	<hgroup class="row-fluid">
 		<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 	</hgroup><!-- .row-fluid -->
+	</div><!-- .container-fluid -->
 	
 	<?php do_action('response_after_header'); ?>
 	
 	<?php do_action('response_before_navigation'); ?>
 	
-	<nav class="main-navigation row-fluid">
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- .main-navigation .row-fluid -->
+	<div id="navigation" class="container-fluid">
+		<nav class="main-navigation row-fluid">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- .main-navigation .row-fluid -->
+	</div><!-- #navigation .container-fluid -->
 	
 	<?php do_action('response_after_navigation'); ?>
 	
-</header><!-- #masthead .container-fluid -->
+</header>
 
 <?php do_action('response_after_header_container'); ?>

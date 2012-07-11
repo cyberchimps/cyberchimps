@@ -23,7 +23,7 @@ get_header(); ?>
 	<div class="row-fluid">
 		
 		<div id="content" class="span9">
-			
+
 			<?php do_action( 'response_before_content'); ?>
 			
 			<?php if ( have_posts() ) : ?>
