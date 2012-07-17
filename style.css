@@ -10,7 +10,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or lat
 */
 
 /* =Menu
------------------------------------------------ */
+----------------------------------------------- 
 .main-navigation {
 	clear: both;
 	display: block;
@@ -62,3 +62,5 @@ License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or lat
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a {
 }
+
+*/
