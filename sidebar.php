@@ -17,12 +17,12 @@
  */
 ?>
 
-<div id="secondary" class="widget-area span3">
+<div id="secondary" <?php response_filter_sidebar_right_class(); ?>>
 	
 	<?php do_action( 'response_before_sidebar' ); ?>
 	
 	<div id="sidebar" class="container-fluid">
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar' ) ) : ?>
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar( 'sidebar-right' ) ) : ?>
 
 		<?php //TODO: ADD DEFAULT SIDEBAR INFO ?>
 		

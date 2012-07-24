@@ -84,6 +84,43 @@ function themename_customize_preview() {
 	<?php 
 }
 
+add_action('wp', 'response_wp');
+function response_wp() {
+
+	$left_is_active = false;
+	$right_is_active = true;
+	$both_on_one_side = false;
+
+	if ( !is_404() ) {
+		
+		// TODO: Get page and post options and check to see if page layout is full width
+		if ( $left_is_active && $right_is_active ) {
+			add_action( 'response_before_content_container', 'response_add_sidebar_left');
+			add_action( 'response_after_content_container', 'response_add_sidebar_right');
+			add_filter( 'response_content_class', 'response_class_span6');
+			add_filter( 'response_sidebar_left_class', 'response_class_span3');
+			add_filter( 'response_sidebar_right_class', 'response_class_span3');
+		} else if ($both_on_one_side) {
+			add_action( 'response_after_content_container', 'response_add_sidebar_left');
+			add_action( 'response_after_content_container', 'response_add_sidebar_right');
+			add_filter( 'response_content_class', 'response_class_span6');
+			add_filter( 'response_sidebar_left_class', 'response_class_span3');
+			add_filter( 'response_sidebar_right_class', 'response_class_span3');
+		} else if ($left_is_active) {
+			add_action( 'response_before_content_container', 'response_add_sidebar_left');
+			add_filter( 'response_content_class', 'response_class_span9');
+			add_filter( 'response_sidebar_left_class', 'response_class_span3');
+		} else if ($right_is_active) {
+			add_action( 'response_after_content_container', 'response_add_sidebar_right');
+			add_filter( 'response_content_class', 'response_class_span9');
+			add_filter( 'response_sidebar_right_class', 'response_class_span3');
+		}
+	
+	} else {
+		add_filter( 'response_content_class', 'response_class_span12');
+	}
+
+}
 
 // FIXME: Fix documentation
 class Bootstrap_Walker extends Walker_Nav_Menu {
@@ -189,6 +226,31 @@ class Bootstrap_Walker extends Walker_Nav_Menu {
 		$cb_args = array_merge( array(&$output, $element, $depth), $args);
 		call_user_func_array(array(&$this, 'end_el'), $cb_args);
 	}
+}
+
+/* HS sets fallback menu for 1 level. Could use preg_split to have children displayed too */
+function HS_fallback_menu() {
+	$args = array(
+		'depth'        => 1,
+		'show_date'    => '',
+		'date_format'  => '',
+		'child_of'     => 0,
+		'exclude'      => '',
+		'include'      => '',
+		'title_li'     => '',
+		'echo'         => 0,
+		'authors'      => '',
+		'sort_column'  => 'menu_order, post_title',
+		'link_before'  => '',
+		'link_after'   => '',
+		'walker'       => '',
+		'post_type'    => 'page',
+		'post_status'  => 'publish' 
+	);
+	$pages = wp_list_pages( $args );
+	$prepend = '<ul id="menu-menu" class="nav">';
+	$append = '</ul>';
+	echo $prepend.$pages.$append;
 }
 
 // FIXME: Just for testing Remove

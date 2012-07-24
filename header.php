@@ -18,23 +18,33 @@
 ?>
 
 <!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
+<!--<![endif]-->
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
 	
 	<title><?php wp_title(''); ?></title>
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-    <?php wp_head(); ?>
-    
-    <!-- IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+	
+	<!-- IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/inc/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
+	
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -70,7 +80,7 @@
 	
 	<?php do_action('response_before_navigation'); ?>
 	
-	<nav id="navigation" class="navbar row-fluid">
+	<nav id="navigation" class="navbar row-fluid" role="navigation">
 		<div class="navbar-inner">
 			<?php // TODO: rename walker function ?>
 			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker() ) ); ?>

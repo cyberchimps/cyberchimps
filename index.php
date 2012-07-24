@@ -20,9 +20,11 @@ get_header(); ?>
 
 <?php do_action( 'response_before_container'); ?>
 
-<div id="container" class="<?php response_filter_container_class(); ?>">
-
-	<div id="content" class="<?php response_filter_content_class(); ?>">
+<div id="container" <?php response_filter_container_class(); ?>>
+	
+	<?php do_action( 'response_before_content_container'); ?>
+	
+	<div id="content" <?php response_filter_content_class(); ?>>
 		
 		<?php do_action( 'response_before_content'); ?>
 		
@@ -48,7 +50,7 @@ get_header(); ?>
 		
 	</div><!-- #content -->
 	
-	<?php get_sidebar(); ?>
+	<?php do_action( 'response_after_content_container'); ?>
 		
 </div><!-- #container -->
 
