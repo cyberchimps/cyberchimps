@@ -82,8 +82,7 @@
 	
 	<nav id="navigation" class="navbar row-fluid" role="navigation">
 		<div class="navbar-inner">
-			<?php // TODO: rename walker function ?>
-			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker() ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker(), 'fallback_cb' => 'HS_fallback_menu' ) ); ?>
 		</div>
 	</nav><!-- #navigation .main-navigation .row-fluid -->
 
