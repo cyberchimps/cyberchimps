@@ -25,6 +25,13 @@
 	 */
 	if ( post_password_required() )
 		return;
+		
+	/*
+	 * If the current post does not have comments open then we will
+	 * return early without loading the comments.
+	 */
+	if ( !comments_open() )
+		return;
 ?>
 
 	<div id="comments" class="comments-area">
@@ -41,7 +48,7 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
-			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'response' ); ?></h1>
+			<h4 class="assistive-text"><?php _e( 'Comment navigation', 'response' ); ?></h4>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'response' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'response' ) ); ?></div>
 		</nav>
@@ -61,7 +68,7 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
-			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'response' ); ?></h1>
+			<h4 class="assistive-text"><?php _e( 'Comment navigation', 'response' ); ?></h4>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'response' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'response' ) ); ?></div>
 		</nav>

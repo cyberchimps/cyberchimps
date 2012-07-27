@@ -20,7 +20,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'response' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<div class="postformats"><!--begin format icon-->
+			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/default.png" alt="formats" />
+		</div><!--end format-icon-->
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'response' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a></h2>  
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -49,13 +52,13 @@
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'response' ) );
-				if ( $categories_list && response_categorized_blog() ) :
+				if ( $categories_list ) :
 			?>
 			<span class="cat-links">
 				<?php printf( __( 'Posted in %1$s', 'response' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
-	
+			
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list( '', __( ', ', 'response' ) );
@@ -63,7 +66,7 @@
 			?>
 			<span class="sep"> | </span>
 			<span class="tag-links">
-				<?php printf( __( 'Tagged %1$s', 'response' ), $tags_list ); ?>
+				<?php printf( __( 'Tags: %1$s', 'response' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
@@ -72,8 +75,9 @@
 			<span class="sep"> | </span>
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'response' ), __( '1 Comment', 'response' ), __( '% Comments', 'response' ) ); ?></span>
 		<?php endif; ?>
-	
+		
 		<?php edit_post_link( __( 'Edit', 'response' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- #entry-meta -->
 	
 </article><!-- #post-<?php the_ID(); ?> -->

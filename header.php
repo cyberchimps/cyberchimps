@@ -77,7 +77,6 @@
 	
 	<?php do_action('response_after_header_container'); ?>
 	
-	
 	<?php do_action('response_before_navigation'); ?>
 	
 	<nav id="navigation" class="navbar row-fluid" role="navigation">
