@@ -79,10 +79,16 @@
 	
 	<?php do_action('response_before_navigation'); ?>
 	
-	<nav id="navigation" class="navbar row-fluid" role="navigation">
-		<div class="navbar-inner">
-			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker(), 'fallback_cb' => 'HS_fallback_menu' ) ); ?>
-		</div>
-	</nav><!-- #navigation .main-navigation .row-fluid -->
+	<div id="navigation" class="container-fluid">
+		<nav class="main-navigation row-fluid">
+    	<div class="navbar">
+  			<div class="navbar-inner">
+    			<div class="container">
+						<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker(), 'fallback_cb' => 'HS_fallback_menu' ) ); ?>
+          </div>
+        </div>
+      </div>
+		</nav><!-- .main-navigation .row-fluid -->
+	</div><!-- #navigation .container-fluid -->
 
 	<?php do_action('response_after_navigation'); ?>
