@@ -57,42 +57,52 @@ pre {
 /******************************************** MENU ******************************************************************/
 /********************************************************************************************************************/
 
-.navbar-inner {
-  min-height: 20px;
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  border: 1px solid #ddd;
+.main-navigation .navbar-inner {
+	min-height: 20px;
+	background: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	border: 1px solid #ddd;
+	padding-left: 0;
+	padding-right: 0;
 }
-.navbar .nav > li > a {
+.main-navigation .menu-primary-container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.main-navigation .nav > li > a {
   color: #08c;
   text-shadow: none;
 }
-.navbar .nav > li > a:hover {
+.main-navigation .nav > li > a:hover {
   color:  #005580;
 }
-.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .current_page_item > a, .navbar .nav .current_page_item > a:hover {
+.main-navigation .nav .active > a,
+.main-navigation .nav .active > a:hover,
+.main-navigation .nav .current_page_item > a,
+.main-navigation .nav .current_page_item > a:hover {
   color: #FFFFFF;
   background: #0088CC;
 }
-.navbar .nav li.dropdown .dropdown-toggle .caret, .navbar .nav li.dropdown.open .caret {
+.main-navigation .nav li.dropdown .dropdown-toggle .caret,
+.main-navigation .nav li.dropdown.open .caret {
   border-top-color: #555;
   border-bottom-color: #555;
 }
-.navbar .nav li ul li ul {
+.main-navigation .nav li ul li ul {
   list-style: none;
   margin-left: 0;
 }
-.navbar .nav li ul li ul li a{
+.main-navigation .nav li ul li ul li a{
   padding-left: 18px;
 }
-.navbar .nav li.current_page_item {
+.main-navigation .nav li.current_page_item {
   background: #0088CC;
 }
-.navbar ul > li.current_page_item > a {
+.main-navigation ul > li.current_page_item > a {
   color: #FFFFFF;
 }
-.navbar .nav li.dropdown:hover ul.dropdown-menu {
+.main-navigation .nav li.dropdown:hover ul.dropdown-menu {
   display: block;
 }
 
