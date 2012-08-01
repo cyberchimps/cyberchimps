@@ -52,5 +52,7 @@ do_action('response_before_footer_widgets'); ?>
 
 <?php wp_footer(); ?>
 
+</div><!-- container -->
+
 </body>
 </html>

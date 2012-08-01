@@ -49,6 +49,8 @@
 
 <body <?php body_class(); ?>>
 
+<div class="container">
+
 <?php do_action('response_before_wrapper'); ?>
 
 <div id="wrapper" class="container-fluid">	
@@ -78,6 +80,13 @@
 	<?php do_action('response_after_header_container'); ?>
 	
 	<?php do_action('response_before_navigation'); ?>
+  
+  
+ 
+ 
+	
+  
+  
 	
 	<nav id="navigation" class="main-navigation navbar" role="navigation">
 		<div class="navbar-inner row-fluid">
