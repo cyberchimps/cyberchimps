@@ -41,83 +41,66 @@ function response_add_site_info() { ?>
 <?php }
 add_action('response_site_info', 'response_add_site_info');
 
-// TODO: Rename and Restructure Code for Theme Options
-add_action( 'customize_register', 'themename_customize_register' );
-function themename_customize_register($wp_customize) {
-
-$wp_customize->add_section( 'themename_color_scheme', array(
-	'title'          => __( 'Color Scheme', 'themename' ),
-	'priority'       => 35,
-) );
-
-
-$wp_customize->add_setting( 'plugin_options[core_color]', array(
-	'default'        => '#000000',
-	'type'           => 'option',
-	'capability'     => 'edit_theme_options',
-	'transport'		=> 'postMessage',
-) );
-
-
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'core_color', array(
-	'label'   => __( 'Link Color', 'themename' ),
-	'section' => 'themename_color_scheme',
-	'settings'   => 'plugin_options[core_color]',
-) ) );
-
-if ( $wp_customize->is_preview() && ! is_admin() )
-	add_action( 'wp_footer', 'themename_customize_preview', 21);
+function response_create_layout() {
+	global $post;
 	
-}
-
-function themename_customize_preview() {
-	?>
-	<script type="text/javascript">
-	wp.customize('plugin_options[core_color]',function( value ) {
-		value.bind(function(to) {
-			jQuery('body').css('background', to );
-		});
-	});
-	</script>
-	<?php 
-}
-
-add_action('wp', 'response_wp');
-function response_wp() {
-
-	$left_is_active = false;
-	$right_is_active = true;
-	$both_on_one_side = false;
-
-	if ( !is_404() ) {
+	if ( is_single() ) {
+		$layout_type = response_get_option('single_post_sidebar_options');
 		
-		// TODO: Get page and post options and check to see if page layout is full width
-		if ( $left_is_active && $right_is_active ) {
-			add_action( 'response_before_content_container', 'response_add_sidebar_left');
-			add_action( 'response_after_content_container', 'response_add_sidebar_right');
-			add_filter( 'response_content_class', 'response_class_span6');
-			add_filter( 'response_sidebar_left_class', 'response_class_span3');
-			add_filter( 'response_sidebar_right_class', 'response_class_span3');
-		} else if ($both_on_one_side) {
-			add_action( 'response_after_content_container', 'response_add_sidebar_left');
-			add_action( 'response_after_content_container', 'response_add_sidebar_right');
-			add_filter( 'response_content_class', 'response_class_span6');
-			add_filter( 'response_sidebar_left_class', 'response_class_span3');
-			add_filter( 'response_sidebar_right_class', 'response_class_span3');
-		} else if ($left_is_active) {
-			add_action( 'response_before_content_container', 'response_add_sidebar_left');
-			add_filter( 'response_content_class', 'response_class_span9');
-			add_filter( 'response_sidebar_left_class', 'response_class_span3');
-		} else if ($right_is_active) {
-			add_action( 'response_after_content_container', 'response_add_sidebar_right');
-			add_filter( 'response_content_class', 'response_class_span9');
-			add_filter( 'response_sidebar_right_class', 'response_class_span3');
-		}
+	} elseif ( is_page() ) {
+		// TODO: Change so that option is not saved as an array
+		$page_sidebar = get_post_meta($post->ID, 'response_page_sidebar');
+		$layout_type = $page_sidebar[0];
+		
+	} elseif ( is_archive() ) {
+		$layout_type = response_get_option('archive_sidebar_options');
+			
+	} elseif ( is_search() ) {
+		$layout_type = response_get_option('search_sidebar_options');	
+	
+	} elseif ( is_404() ) {
+		$layout_type = response_get_option('error_sidebar_options');
 	
 	} else {
-		add_filter( 'response_content_class', 'response_class_span12');
+		$layout_type = apply_filters('response_default_layout', 'right_sidebar');
 	}
+	
+	response_get_layout($layout_type);
+}
+add_action('wp', 'response_create_layout');
 
+function response_get_layout( $layout_type ) {
+	if ( $layout_type ) {
+		switch($layout_type) {
+			case 'full_width' :
+				add_filter( 'response_content_class', 'response_class_span12');
+			break;
+			case 'right_sidebar' :
+				add_action( 'response_after_content_container', 'response_add_sidebar_right');
+				add_filter( 'response_content_class', 'response_class_span9');
+				add_filter( 'response_sidebar_right_class', 'response_class_span3');
+			break;
+			case 'left_sidebar' :
+				add_action( 'response_before_content_container', 'response_add_sidebar_left');
+				add_filter( 'response_content_class', 'response_class_span9');
+				add_filter( 'response_sidebar_left_class', 'response_class_span3');
+			break;
+			case 'content_middle' :
+				add_action( 'response_before_content_container', 'response_add_sidebar_left');
+				add_action( 'response_after_content_container', 'response_add_sidebar_right');
+				add_filter( 'response_content_class', 'response_class_span6');
+				add_filter( 'response_sidebar_left_class', 'response_class_span3');
+				add_filter( 'response_sidebar_right_class', 'response_class_span3');
+			break;
+			case 'left_right_sidebar' :
+				add_action( 'response_after_content_container', 'response_add_sidebar_left');
+				add_action( 'response_after_content_container', 'response_add_sidebar_right');
+				add_filter( 'response_content_class', 'response_class_span6');
+				add_filter( 'response_sidebar_left_class', 'response_class_span3');
+				add_filter( 'response_sidebar_right_class', 'response_class_span3');
+			break;
+		}
+	}	
 }
 
 // FIXME: Fix documentation

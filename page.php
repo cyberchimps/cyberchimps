@@ -42,12 +42,14 @@ function page_section_order_action() {
 	$page_section_order = get_post_meta($post->ID, 'response_page_section_order' , true);
 
 	// TODO: Remove debugging
-	var_dump($page_section_order);
-	foreach ( $page_section_order as $func) {
-		do_action($func);
+	//var_dump($page_section_order);
+	if ( is_array($page_section_order) ) {
+		foreach ( $page_section_order as $func) {
+			do_action($func);
+		}
 	}
 }
-add_action('response_before_content', 'page_section_order_action');
+add_action('response_before_container', 'page_section_order_action');
 
 ?>
 <?php do_action( 'response_before_container'); ?>
