@@ -57,12 +57,38 @@
 	
 	<?php do_action('response_masthead_content'); ?>
 
+	<?php
+		// TODO: Move everything below to hooks file.
+		function action_ifeature_header_content() {
+			echo '<div class="span8">';
+			echo 'ifeature_header_content';
+			echo '</div>';
+		}
+		add_action('ifeature_header_content', 'action_ifeature_header_content');
+		
+		function action_ifeature_description_icons() {
+			echo '<div class="span4">';
+			echo 'ifeature_description_icons';
+			echo '</div>';
+		}
+		add_action('ifeature_description_icons', 'action_ifeature_description_icons');
+		
+		function action_header_section_order() {
+			echo '<div class="row-fluid">';
+			foreach(response_get_option('header_section_order') as $func => $status) {
+				do_action($func);
+			}
+			echo '</div>';
+		}
+		add_action('response_before_header_container', 'action_header_section_order');
+	?>
+	
 	<?php do_action('response_before_header_container'); ?>
 	
 	<header class="row-fluid">
 		
 		<?php do_action('response_before_header'); ?>
-		
+
 		<div class="span8">
 			<hgroup>
 				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -80,14 +106,7 @@
 	<?php do_action('response_after_header_container'); ?>
 	
 	<?php do_action('response_before_navigation'); ?>
-  
-  
- 
- 
-	
-  
-  
-	
+
 	<nav id="navigation" class="main-navigation navbar" role="navigation">
 		<div class="navbar-inner row-fluid">
 			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker(), 'fallback_cb' => 'HS_fallback_menu' ) ); ?>
