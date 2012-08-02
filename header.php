@@ -75,7 +75,7 @@
 		
 		function action_header_section_order() {
 			echo '<div class="row-fluid">';
-			foreach(response_get_option('header_section_order') as $func => $status) {
+			foreach(response_get_option('header_section_order') as $func) {
 				do_action($func);
 			}
 			echo '</div>';
@@ -89,15 +89,12 @@
 		
 		<?php do_action('response_before_header'); ?>
 
-		<div class="span8">
+		<div class="span12">
 			<hgroup>
 				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
-		</div><!-- .span8 -->
-		<div class="span4">
-			<?php // TODO: Create some type of hook to allow elements to be placed here ?>
-		</div><!-- .span4 -->
+		</div><!-- .span12 -->
 		
 		<?php do_action('response_after_header'); ?>
 		
@@ -109,7 +106,7 @@
 
 	<nav id="navigation" class="main-navigation navbar" role="navigation">
 		<div class="navbar-inner row-fluid">
-			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new bootstrap_walker(), 'fallback_cb' => 'HS_fallback_menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new response_walker(), 'fallback_cb' => 'response_fallback_menu' ) ); ?>
 		</div><!-- .navbar-inner .row-fluid -->
 	</nav><!-- #navigation .main-navigation .navbar -->
 	

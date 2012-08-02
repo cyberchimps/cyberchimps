@@ -34,8 +34,6 @@ function response_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'response_scripts', 20 );
 
-
-
 // FIXME: Fix documentation
 // TODO: Rename and rework function
 function response_add_site_info() { ?>
@@ -123,7 +121,7 @@ function response_wp() {
 }
 
 // FIXME: Fix documentation
-class Bootstrap_Walker extends Walker_Nav_Menu {
+class Response_Walker extends Walker_Nav_Menu {
 	
 	// FIXME: Fix documentation
     function start_lvl( &$output, $depth ) {
@@ -228,8 +226,9 @@ class Bootstrap_Walker extends Walker_Nav_Menu {
 	}
 }
 
-/* HS sets fallback menu for 1 level. Could use preg_split to have children displayed too */
-function HS_fallback_menu() {
+// FIXME: Fix documentation	
+// Sets fallback menu for 1 level. Could use preg_split to have children displayed too
+function response_fallback_menu() {
 	$args = array(
 		'depth'        => 1,
 		'show_date'    => '',
@@ -251,112 +250,6 @@ function HS_fallback_menu() {
 	$prepend = '<ul id="menu-menu" class="nav">';
 	$append = '</ul>';
 	echo $prepend.$pages.$append;
-}
-
-// FIXME: Just for testing Remove
-// Testing Callout Element
-function debug_add_callout_to_container() {
-	do_action('response_callout');
-}
-//add_action('response_before_container', 'debug_add_callout_to_container');
-
-// Testing Callout Element Before Content
-function debug_add_callout_to_content() {
-	do_action('response_callout');
-}
-//add_action('response_before_content', 'debug_add_callout_to_content');
-
-// Testing Twitter Bar Element
-function debug_add_twitter_bar_to_content() {
-	do_action('response_twitter_bar');
-}
-//add_action('response_before_content', 'debug_add_twitter_bar_to_content', 20);
-
-
-function debug_add_masthead_content() { ?>
-	<div id="masthead" class="row-fluid">
-		Masthead
-	</div><!-- #masthead .row-fluid -->
-<?php }
-//add_action('response_masthead_content', 'debug_add_masthead_content');
-
-//add_action('response_before_container', 'debug_load_element_tests');
-//add_action('response_before_content', 'debug_load_element_tests');
-function debug_load_element_tests( ) { 
-	$limit = 4;
-	
-	if ( $limit >= 1 ) { ?>
-		<div class="row-fluid">
-			<div class="span12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-		</div>
-	<?php } ?>
-	
-	<?php if ( $limit >= 2 ) { ?>
-		<div class="row-fluid">
-			<div class="span6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-		</div>
-	<?php } ?>
-	
-	<?php if ( $limit >= 3 ) { ?>
-		<div class="row-fluid">
-			<div class="span4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-		</div>
-	<?php } ?>
-	
-	<?php if ( $limit >= 4 ) { ?>
-		<div class="row-fluid">
-			<div class="span3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span3">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-		</div>
-	<?php } ?>
-	
-	<?php if ( $limit >= 6 ) { ?>
-		<div class="row-fluid">
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-			<div class="span2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nulla nisl, in blandit velit. Aliquam erat volutpat. Sed vel orci quis tortor mollis viverra quis quis odio. Aenean eget imperdiet erat. Etiam metus velit, accumsan at dictum vel, molestie eu magna. Nulla pretium mi sit amet urna pulvinar vel auctor lorem euismod.</p>
-			</div>
-		</div>
-	<?php }
 }
 
 if ( ! function_exists( 'response_comment' ) ) :
