@@ -15,12 +15,43 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
- 
+
 do_action('response_before_footer_widgets'); ?>
 
 <div id="footer-widgets" class="row-fluid">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('response-footer-widgets')) : ?>
-		<?php //TODO: INSERT DEFAULT WIDGETS ?>
+		
+		<aside class="widget span3">
+			<h3 class="widget-title"><?php _e('Pages', 'response' ); ?></h3>
+			<ul>
+    			<?php wp_list_pages('title_li=' ); ?>
+    		</ul>
+    	</aside>
+    
+		<aside class="widget span3">
+    		<h3 class="widget-title"><?php _e( 'Archives', 'response' ); ?></h3>
+    		<ul>
+    			<?php wp_get_archives('type=monthly'); ?>
+    		</ul>
+    	</aside>
+        
+		<aside class="widget span3">
+			<h3 class="widget-title"><?php _e('Categories', 'response' ); ?></h3>
+			<ul>
+				<?php wp_list_categories('show_count=1&title_li='); ?>
+			</ul>
+        </aside>
+        
+        <aside class="widget span3">
+        	<h3 class="widget-title"><?php _e('WordPress', 'response' ); ?></h3>
+        	<ul>
+        		<?php wp_register(); ?>
+        		<li><?php wp_loginout(); ?></li>
+        		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'response' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'response'); ?>"> <?php _e('WordPress', 'response' ); ?></a></li>
+        		<?php wp_meta(); ?>
+    		</ul>
+		</aside>
+		
 	<?php endif; ?>
 </div><!-- #footer-widgets .row-fluid  -->
 
@@ -31,15 +62,7 @@ do_action('response_before_footer_widgets'); ?>
 
 <footer class="site-footer row-fluid">
 	
-	<?php do_action('response_before_footer'); ?>
-	
-	<?php do_action('response_before_site_info'); ?>
-	<div class="site-info">
-		<?php do_action( 'response_site_info' ); ?>
-	</div><!-- .site-info -->
-	<?php do_action('response_after_site_info'); ?>
-	
-	<?php do_action('response_after_footer'); ?>
+	<?php do_action('response_footer'); ?>
 	
 </footer><!-- .site-footer .row-fluid -->
 

@@ -50,57 +50,12 @@
 <body <?php body_class(); ?>>
 
 <div class="container">
-
+	
 <?php do_action('response_before_wrapper'); ?>
 
 <div id="wrapper" class="container-fluid">	
 	
-	<?php do_action('response_masthead_content'); ?>
-
-	<?php
-		// TODO: Move everything below to hooks file.
-		function action_ifeature_header_content() {
-			echo '<div class="span8">';
-			echo 'ifeature_header_content';
-			echo '</div>';
-		}
-		add_action('ifeature_header_content', 'action_ifeature_header_content');
-		
-		function action_ifeature_description_icons() {
-			echo '<div class="span4">';
-			echo 'ifeature_description_icons';
-			echo '</div>';
-		}
-		add_action('ifeature_description_icons', 'action_ifeature_description_icons');
-		
-		function action_header_section_order() {
-			echo '<div class="row-fluid">';
-			foreach(response_get_option('header_section_order') as $func) {
-				do_action($func);
-			}
-			echo '</div>';
-		}
-		add_action('response_before_header_container', 'action_header_section_order');
-	?>
-	
-	<?php do_action('response_before_header_container'); ?>
-	
-	<header class="row-fluid">
-		
-		<?php do_action('response_before_header'); ?>
-
-		<div class="span12">
-			<hgroup>
-				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
-		</div><!-- .span12 -->
-		
-		<?php do_action('response_after_header'); ?>
-		
-	</header><!-- .row-fluid -->
-	
-	<?php do_action('response_after_header_container'); ?>
+	<?php do_action('response_header'); ?>
 	
 	<?php do_action('response_before_navigation'); ?>
 
