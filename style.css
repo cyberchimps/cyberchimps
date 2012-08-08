@@ -59,12 +59,14 @@ pre {
 /******************************************** MENU ******************************************************************/
 /********************************************************************************************************************/
 
-.main-navigation .navbar-inner {
-	min-height: 20px;
-	background: transparent;
-	box-shadow: none;
-	border-radius: 0;
+.main-navigation.navbar {
 	border: 1px solid #ddd;
+  margin-bottom: 0;
+}
+.main-navigation .navbar-inner {
+	background: transparent;
+  box-shadow: none;
+	border-radius: 0;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -518,26 +520,11 @@ h3.widget-title {
 /******************************************** FOOTER ****************************************************************/
 /********************************************************************************************************************/
 
-.site-footer {
-  clear: both;
-}
-.footer-container {
-  border: 1px solid #ddd;
-  padding: 15px;
-}
-.footer-container ul {
-  margin-left: 0;
-}
-.footer-container ul li {
-  font-size: 14px;
-  line-height: 1.8em;
-  list-style: none;
-}
-#footer-widgets {
-  border: 1px solid #ddd;
-}
 #footer-widgets .widget-container {
   border: none;
+}
+#footer-widget-container {
+  border: 1px solid #ddd;
 }
 #footer-copyright {
 	text-align: right;

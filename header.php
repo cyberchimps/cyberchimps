@@ -62,10 +62,12 @@
 	
 	<?php do_action('cyberchimps_before_navigation'); ?>
 
-	<nav id="navigation" class="main-navigation navbar" role="navigation">
-		<div class="navbar-inner row-fluid">
-			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
-		</div><!-- .navbar-inner .row-fluid -->
-	</nav><!-- #navigation .main-navigation .navbar -->
+	<nav id="navigation" class="row-fluid" role="navigation">
+  	<div class="main-navigation navbar">
+      <div class="navbar-inner">
+        <?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
+      </div><!-- .navbar-inner .row-fluid -->
+    </div><!-- main-navigation navbar -->
+	</nav><!-- #navigation -->
 	
 	<?php do_action('cyberchimps_after_navigation'); ?>
