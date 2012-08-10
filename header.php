@@ -16,18 +16,21 @@
  * @link     http://www.cyberchimps.com/
  */
 ?>
-
 <!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" <?php language_attributes(); ?>>
+<!--[if lt IE 7]>
+<html class="ie ie6 lte9 lte8 lte7" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if IE 7]>
-<html id="ie7" <?php language_attributes(); ?>>
+<html class="ie ie7 lte9 lte8 lte7" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if IE 8]>
-<html id="ie8" <?php language_attributes(); ?>>
+<html class="ie ie8 lte9 lte8" <?php language_attributes(); ?>>
 <![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<!--[if IE 9]>
+<html class="ie ie9 lte9" <?php language_attributes(); ?>> 
+<![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> 
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
@@ -59,10 +62,12 @@
 	
 	<?php do_action('cyberchimps_before_navigation'); ?>
 
-	<nav id="navigation" class="main-navigation navbar" role="navigation">
-		<div class="navbar-inner row-fluid">
-			<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
-		</div><!-- .navbar-inner .row-fluid -->
-	</nav><!-- #navigation .main-navigation .navbar -->
+	<nav id="navigation" class="row-fluid" role="navigation">
+  	<div class="main-navigation navbar">
+      <div class="navbar-inner">
+        <?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
+      </div><!-- .navbar-inner .row-fluid -->
+    </div><!-- main-navigation navbar -->
+	</nav><!-- #navigation -->
 	
 	<?php do_action('cyberchimps_after_navigation'); ?>
