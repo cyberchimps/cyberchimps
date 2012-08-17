@@ -16,6 +16,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or lat
 body {color:#555}
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
+  font-weight: 400;
 }
 
 table .label {
@@ -174,7 +175,6 @@ blockquote cite:before {
 /*==================================== TAXONOMY ========================================================*/
 
 h2.entry-title {
-  font-weight: 400;
   margin-bottom: 5px;
 }
 h2.entry-title a {
@@ -535,10 +535,56 @@ h3.widget-title {
 /********************************************************************************************************************/
 
 /*==================================== CALLOUT ====================================================*/
-#callout {
+.callout {
   padding: 10px 0;
   border: 1px solid #ddd;
 }
-#callout-text {
+h2.callout-title {
+  font-size: 1.4em;
   margin: 0 10px;
+}
+
+/*==================================== Widget Boxes ===============================================*/
+
+.box {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+h2.box-widget-title {
+  font-size: 1.4em;
+  text-align: center;
+}
+.box p {
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+
+/*==================================== Carousel ===================================================*/
+
+#cc-carousel {
+  border: 1px solid #ddd;
+  padding: 10px 50px;
+}
+#cc-carousel ul {
+  display: block;
+  margin: 0;
+  padding: 0; 
+}
+#cc-carousel ul li {
+  position: relative;
+  display: block;
+}
+#cc-carousel ul li .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+#cc-carousel ul li .caption h3 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: normal;
+  text-align: center;
+  margin: 4px 0;
 }
