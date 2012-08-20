@@ -16,6 +16,8 @@
  * @link     http://www.cyberchimps.com/
  */
 
+if (cyberchimps_get_option('footer_show_toggle') == '1') { 
+	
 do_action('cyberchimps_before_footer_widgets'); ?>
 
 <div id="footer-widgets" class="row-fluid">
@@ -72,6 +74,7 @@ do_action('cyberchimps_before_footer_widgets'); ?>
 
 <?php do_action('cyberchimps_after_footer_container'); ?>
 
+<?php } ?>
 
 </div><!-- #wrapper .container-fluid -->
 

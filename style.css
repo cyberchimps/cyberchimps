@@ -526,7 +526,7 @@ h3.widget-title {
 #footer-widget-container {
   border: 1px solid #ddd;
 }
-#footer-copyright {
+.site-footer #copyright {
 	text-align: right;
 }
 
