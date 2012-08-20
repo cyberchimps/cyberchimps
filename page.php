@@ -19,30 +19,11 @@
 get_header(); ?>
 
 <?php
-
-// TODO: Move to hooks
-function callout_section_action() {
-	do_action('cyberchimps_callout');
-}
-add_action('callout_section', 'callout_section_action');
-
-function twitterbar_section_action() {
-	do_action('cyberchimps_twitter_bar');
-}
-add_action('twitterbar_section', 'twitterbar_section_action');
-
-function breadcrumbs_section_action() {
-	do_action('cyberchimps_breadcrumbs');
-}
-add_action('breadcrumbs', 'breadcrumbs_section_action');
-
 function page_section_order_action() {
 	global $post;
 	
 	$page_section_order = get_post_meta($post->ID, 'cyberchimps_page_section_order' , true);
-
-	// TODO: Remove debugging
-	//var_dump($page_section_order);
+	
 	if ( is_array($page_section_order) ) {
 		foreach ( $page_section_order as $func) {
 			do_action($func);
