@@ -544,7 +544,7 @@ h2.callout-title {
   margin: 0 10px;
 }
 
-/*==================================== Widget Boxes ===============================================*/
+/*==================================== WIDGET BOXES ===============================================*/
 
 .box {
   padding: 15px;
@@ -558,8 +558,13 @@ h2.box-widget-title {
   font-size: 1.1em;
   line-height: 1.2em;
 }
+@media (max-width: 767px) {
+  .box {
+    margin-bottom: 20px;
+  }
+}
 
-/*==================================== Carousel ===================================================*/
+/*==================================== CAROUSEL ===================================================*/
 
 #cc-carousel {
   border: 1px solid #ddd;
@@ -574,6 +579,7 @@ h2.box-widget-title {
 #cc-carousel ul li {
   position: relative;
   display: inline-block;
+  margin-bottom: 0;
 }
 #cc-carousel ul li .caption {
   position: absolute;
@@ -589,6 +595,16 @@ h2.box-widget-title {
   text-align: center;
   margin: 0;
 }
+#cc-carousel .carousel-control {
+  top: 50%;
+  border: none;
+}
+#cc-carousel .carousel-control.left {
+  left: 5px;
+}
+#cc-carousel .carousel-control.right {
+  right: 5px;
+}
 @media (max-width: 767px) {
   #cc-carousel [class*="span"], .row-fluid #cc-carousel [class*="span"] {
     float: left;
@@ -598,4 +614,34 @@ h2.box-widget-title {
   #cc-carousel [class*="span"]:first-child, .row-fluid #cc-carousel [class*="span"]:first-child {
     margin-left: 0;
   }
+}
+
+/*==================================== PORTFOLIO ===================================================*/
+
+.portfolio {
+  border: 1px solid #ddd;
+  padding: 10px 0;
+}
+#gallery ul.row-fluid {
+  margin: 0;
+  padding: 0;
+}
+#gallery h3 {
+  margin-left: 20px;
+}
+#gallery ul.row-fluid li {
+  text-align: center;
+}
+
+/*==================================== SLIDER ======================================================*/
+
+#slider {
+  border: 1px solid #ddd;
+}
+
+/*==================================== TWITTER =====================================================*/
+
+#twitter-bar {
+  border: 1px solid #ddd;
+	padding: 10px;
 }
