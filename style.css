@@ -566,13 +566,14 @@ h2.box-widget-title {
   padding: 10px 50px;
 }
 #cc-carousel ul {
-  display: block;
+  max-height: 150px;
+  width: 100%;
   margin: 0;
   padding: 0; 
 }
 #cc-carousel ul li {
   position: relative;
-  display: block;
+  display: inline-block;
 }
 #cc-carousel ul li .caption {
   position: absolute;
@@ -586,5 +587,15 @@ h2.box-widget-title {
   font-size: 1em;
   font-weight: normal;
   text-align: center;
-  margin: 4px 0;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  #cc-carousel [class*="span"], .row-fluid #cc-carousel [class*="span"] {
+    float: left;
+    width: 14.364640883%;
+    margin-left: 2.762430939%;
+  }
+  #cc-carousel [class*="span"]:first-child, .row-fluid #cc-carousel [class*="span"]:first-child {
+    margin-left: 0;
+  }
 }
