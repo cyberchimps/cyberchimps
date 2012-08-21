@@ -536,12 +536,14 @@ h3.widget-title {
 
 /*==================================== CALLOUT ====================================================*/
 .callout {
-  padding: 10px 0;
+  padding: 20px;
   border: 1px solid #ddd;
 }
-h2.callout-title {
-  font-size: 1.4em;
-  margin: 0 10px;
+.callout-text h2.callout-title {
+  font-size: 1.6em;
+}
+.callout-text p {
+  font-size: 1.2em;
 }
 
 /*==================================== WIDGET BOXES ===============================================*/
