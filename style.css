@@ -647,3 +647,11 @@ h2.box-widget-title {
   border: 1px solid #ddd;
 	padding: 10px;
 }
+
+/*==================================== BREADCRUMBS =================================================*/
+
+.breadcrumbs {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
