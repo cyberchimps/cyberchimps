@@ -66,14 +66,15 @@ header {
 
 .main-navigation.navbar {
 	border: 1px solid #ddd;
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .main-navigation .navbar-inner {
 	background: transparent;
-  box-shadow: none;
+  	box-shadow: none;
 	border-radius: 0;
 	padding-left: 0;
 	padding-right: 0;
+	margin-bottom: -1px;
 }
 .main-navigation .menu-primary-container {
 	padding-left: 20px;
