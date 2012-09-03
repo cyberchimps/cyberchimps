@@ -67,6 +67,7 @@ header {
 .main-navigation.navbar {
 	border: 1px solid #ddd;
 	margin-bottom: 0;
+  background: #fff;
 }
 .main-navigation .navbar-inner {
 	background: transparent;
@@ -120,6 +121,9 @@ header {
 /******************************************** MAIN CONTENT **********************************************************/
 /********************************************************************************************************************/
 
+.container {
+  background: #fff;
+}
 article.post, article.page, article.attachment {
   margin-bottom: 15px;
   padding: 15px;
@@ -136,6 +140,9 @@ article.post, article.page, article.attachment {
 
 /*==================================== POST AND PAGE CONTENT ===========================================*/
 
+article {
+  background: #fff;
+}
 .postformats {
   float: right;
 }
@@ -404,6 +411,7 @@ ol.commentlist li.odd {
   border: 1px solid #ddd;
   margin-bottom: 15px;
   padding: 15px;
+  background: #fff;
 }
 h3.widget-title {
   font-weight: normal;
@@ -530,6 +538,7 @@ h3.widget-title {
 }
 #footer-widget-container {
   border: 1px solid #ddd;
+  background: #fff;
 }
 .site-footer #copyright {
 	text-align: right;
@@ -659,4 +668,10 @@ h2.box-widget-title {
   border: 1px solid #ddd;
   padding: 10px 20px;
   font-size: 1.1em;
+}
+
+/*==================================== PAGINATION ==================================================*/
+
+.pagination ul li a {
+  background: #fff;
 }
