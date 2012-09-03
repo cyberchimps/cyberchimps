@@ -290,11 +290,11 @@ endif; // ends check for cyberchimps_comment()
 // TODO move customization of core to it's own folder
 // core options customization
 function core_options_welcome_header( $text ) {
-	$text = 'Response';
+	$text = __( 'Response', 'cyberchimps' );
 	return $text;
 }
 function core_options_welcome_sub_header( $text ){
-	$text = 'Response Professional Responsive WordPress Theme';
+	$text = __( 'Response Professional Responsive WordPress Theme', 'cyberchimps' );
 	return $text;
 }
 function core_options_welcome( $text ){
@@ -313,6 +313,6 @@ function core_options_welcome( $text ){
 					<p>A Professional WordPress Theme</p>';
 	return $text;
 }
-add_filter( 'cyberchimps_sanitize_info_heading', 'core_options_welcome_header' );
-add_filter( 'cyberchimps_sanitize_info_sub_heading', 'core_options_welcome_sub_header' );
-add_filter( 'cyberchimps_sanitize_info', 'core_options_welcome', 1 );
+add_filter( 'cyberchimps_welcome_heading', 'core_options_welcome_header' );
+add_filter( 'cyberchimps_welcome_sub_heading', 'core_options_welcome_sub_header' );
+add_filter( 'cyberchimps_welcome_description', 'core_options_welcome', 1 );
