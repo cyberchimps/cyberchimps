@@ -62,7 +62,8 @@ do_action('cyberchimps_before_footer_widgets'); ?>
 </div><!-- #footer-widgets .row-fluid  -->
 
 <?php do_action('cyberchimps_after_footer_widgets'); ?>
-	
+
+<?php } ?>	
 
 <?php do_action('cyberchimps_before_footer_container'); ?>
 
@@ -73,8 +74,6 @@ do_action('cyberchimps_before_footer_widgets'); ?>
 </footer><!-- .site-footer .row-fluid -->
 
 <?php do_action('cyberchimps_after_footer_container'); ?>
-
-<?php } ?>
 
 </div><!-- #wrapper .container-fluid -->
 
