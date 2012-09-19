@@ -20,15 +20,11 @@ get_header(); ?>
 
 <?php do_action( 'cyberchimps_before_container'); ?>
 
-<div id="container" <?php cyberchimps_filter_container_class(); ?>>
 
-	<?php do_action( 'cyberchimps_before_content_container'); ?>
 	
 	<?php do_action( 'cyberchimps_blog_content' ); ?>
 	
-	<?php do_action( 'cyberchimps_after_content_container'); ?>
 	
-</div><!-- #container -->
 
 <?php do_action( 'cyberchimps_after_container'); ?>
 

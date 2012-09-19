@@ -52,10 +52,6 @@ pre {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.row-fluid {
-  margin-bottom: 20px;
-}
-
 header {
 	margin-top: 15px;
 }
@@ -93,6 +89,9 @@ header p {
 /******************************************** MENU ******************************************************************/
 /********************************************************************************************************************/
 
+#navigation {
+ 	margin-bottom: 20px; 
+}
 .main-navigation.navbar {
 	border: 1px solid #ddd;
 	margin-bottom: 0;
@@ -578,7 +577,11 @@ h3.widget-title {
 /********************************************************************************************************************/
 
 /*==================================== CALLOUT ====================================================*/
-.callout {
+
+#callout-container {
+  margin-bottom: 20px;
+}
+#callout {
   padding: 20px;
   border: 1px solid #ddd;
 }
@@ -587,6 +590,10 @@ h3.widget-title {
 }
 .callout-text p {
   font-size: 1.2em;
+}
+#callout_button a {
+ 	margin-top: 5px;
+  float: right;
 }
 
 /*==================================== WIDGET BOXES ===============================================*/
@@ -686,6 +693,9 @@ h2.box-widget-title {
 
 /*==================================== TWITTER =====================================================*/
 
+#twitter-container {
+  margin-bottom: 20px;
+}
 #twitter-bar {
   border: 1px solid #ddd;
 	padding: 10px;
