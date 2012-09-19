@@ -598,6 +598,9 @@ h3.widget-title {
 
 /*==================================== WIDGET BOXES ===============================================*/
 
+#widget-boxes-container {
+ 	margin-bottom: 20px; 
+}
 .box {
   padding: 15px;
   border: 1px solid #ddd;
