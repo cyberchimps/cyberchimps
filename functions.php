@@ -20,6 +20,9 @@
 // Load Core
 require_once( get_template_directory() . '/core/init.php' );
 
+// Load Pro
+require_once( get_template_directory() . '/pro/init.php' );
+
 // FIXME: Fix documentation
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
@@ -47,6 +50,9 @@ function cyberchimps_create_layout() {
 	if ( is_single() ) {
 		$layout_type = cyberchimps_get_option('single_post_sidebar_options');
 		
+	} elseif ( is_home() ) {
+		$layout_type = cyberchimps_get_option('sidebar_images');
+	
 	} elseif ( is_page() ) {
 		// TODO: Change so that option is not saved as an array
 		$page_sidebar = get_post_meta($post->ID, 'cyberchimps_page_sidebar');
