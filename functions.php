@@ -23,6 +23,15 @@ require_once( get_template_directory() . '/core/init.php' );
 // Load Pro
 require_once( get_template_directory() . '/pro/init.php' );
 
+// Set options function
+function cyberchimps_option( $name = false, $subname = false ){
+	$options = get_option( 'cyberchimps_options' );
+	if( $name ) {
+		$value = $options[$name];
+		return $value;
+	}
+}
+
 // FIXME: Fix documentation
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )

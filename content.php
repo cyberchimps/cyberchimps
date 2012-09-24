@@ -20,9 +20,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header">
+  	<?php if( cyberchimps_option( 'post_format_icons' ) ): ?>
 		<div class="postformats"><!--begin format icon-->
 			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/default.png" alt="formats" />
 		</div><!--end format-icon-->
+    <?php endif; ?>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a></h2>  
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
