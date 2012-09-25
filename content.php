@@ -44,6 +44,11 @@
 			
 	<?php else : ?>
   	<div class="entry-summary">
+    <?php if( has_post_thumbnail() && $options['post_featured_images'] ): ?>
+      	<div class="featured-image">
+        	<?php the_post_thumbnail(); ?>
+        </div>
+      <?php endif; ?>
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		
