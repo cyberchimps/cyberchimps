@@ -18,7 +18,7 @@
  
 get_header(); ?>
 
-<?php do_action( 'cyberchimps_before_container'); ?>
+<?php do_action( 'cyberchimps_before_container' ); ?>
 
 
 	

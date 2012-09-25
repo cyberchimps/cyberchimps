@@ -21,11 +21,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header">
-  	<?php if( cyberchimps_option( 'post_format_icons' ) ): ?>
-		<div class="postformats"><!--begin format icon-->
-			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/default.png" alt="formats" />
-		</div><!--end format-icon-->
-    <?php endif; ?>
+		
+		<?php cyberchimps_post_format_icon(); ?>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a></h2>  
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -38,17 +35,24 @@
 	<?php if ( is_single() ) : // Only display Excerpts for Search ?>
   
 		<div class="entry-content">
+    	<?php cyberchimps_featured_image(); ?>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
-			
+		
+  <?php elseif( is_search() ): ?>	
+  	<div class="entry-summary">
+    <?php cyberchimps_featured_image(); ?>
+    	<?php add_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
+      <?php add_filter( 'excerpt_length', 'cyberchimps_search_excerpt_length', 999 ); ?>
+			<?php the_excerpt(); ?>
+      <?php remove_filter( 'excerpt_length', 'cyberchimps_search_excerpt_length', 999 ); ?>
+      <?php remove_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
+		</div><!-- .entry-summary -->
+    
 	<?php else : ?>
   	<div class="entry-summary">
-    <?php if( has_post_thumbnail() && $options['post_featured_images'] ): ?>
-      	<div class="featured-image">
-        	<?php the_post_thumbnail(); ?>
-        </div>
-      <?php endif; ?>
+    <?php cyberchimps_featured_image(); ?>
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		

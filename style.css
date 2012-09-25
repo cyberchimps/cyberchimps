@@ -171,6 +171,9 @@ article.post, article.page, article.attachment {
 article {
   background: #fff;
 }
+.entry-summary {
+  margin: 10px 0;
+}
 .postformats {
   float: right;
 }
@@ -705,6 +708,7 @@ h2.box-widget-title {
 
 .breadcrumbs {
   border: 1px solid #ddd;
+  margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 1.1em;
 }
