@@ -16,6 +16,9 @@
  * @link     http://www.cyberchimps.com/
  */
 
+// set global variable
+$options = get_option('cyberchimps_options');
+
 // FIXME: Fix documentation
 // Load Core
 require_once( get_template_directory() . '/core/init.php' );
