@@ -56,34 +56,18 @@
 	
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'cyberchimps' ) );
-				if ( $categories_list ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'cyberchimps' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
-			
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'cyberchimps' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="sep"> | </span>
-			<span class="tag-links">
-				<?php printf( __( 'Tags: %1$s', 'cyberchimps' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
+    
+				<?php cyberchimps_posted_in() ?>
 	
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="sep"> | </span>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'cyberchimps' ), __( '1 Comment', 'cyberchimps' ), __( '% Comments', 'cyberchimps' ) ); ?></span>
-		<?php endif; ?>
+				<?php cyberchimps_post_tags(); ?>
+        
+		<?php endif; // End if 'post' == get_post_type() ?>
+    
+		<?php cyberchimps_post_comments() ?>
 		
-		<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
+    
+    <?php cyberchimps_article_share() ?>
 		
 	</footer><!-- #entry-meta -->
 	

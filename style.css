@@ -340,7 +340,9 @@ footer.entry-meta {
   text-decoration: none;
   color: #ccc;
 }
-  
+.cyberchimps_article_share {
+  float: right;
+}
 
 /*==================================== COMMENTS ========================================================*/
 
