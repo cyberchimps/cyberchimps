@@ -673,9 +673,11 @@ h2.box-widget-title {
 
 /*==================================== PORTFOLIO ===================================================*/
 
-.portfolio {
+#portfolio {
+  margin-bottom: 20px;
+}
+#gallery {
   border: 1px solid #ddd;
-  padding: 10px 0;
 }
 #gallery ul.row-fluid {
   margin: 0;
