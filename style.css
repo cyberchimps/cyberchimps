@@ -98,6 +98,7 @@ header p {
 .main-navigation .navbar-inner {
   -webkit-border-radius: 1px;
   border-radius: 1px;
+  padding-left: 0px;
 }
 .main-navigation .menu-primary-container {
 }
