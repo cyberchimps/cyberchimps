@@ -93,9 +93,8 @@ header p {
  	margin-bottom: 20px; 
 }
 .main-navigation.navbar {
-	border: 1px solid #ddd;
 	margin-bottom: 0;
-  background: #fff;
+  background: #08C;
 }
 .main-navigation .navbar-inner {
 	background: transparent;
@@ -104,13 +103,14 @@ header p {
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: -1px;
+  border: 1px solid #08c;
 }
 .main-navigation .menu-primary-container {
 	padding-left: 20px;
 	padding-right: 20px;
 }
 .main-navigation .nav > li > a {
-  color: #08c;
+  color: #fff;
   text-shadow: none;
 }
 .main-navigation .nav > li > a:hover {
@@ -125,8 +125,8 @@ header p {
 }
 .main-navigation .nav li.dropdown .dropdown-toggle .caret,
 .main-navigation .nav li.dropdown.open .caret {
-  border-top-color: #555;
-  border-bottom-color: #555;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
 .main-navigation .nav li ul li ul {
   list-style: none;
