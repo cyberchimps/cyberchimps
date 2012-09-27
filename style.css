@@ -96,6 +96,8 @@ header p {
 	margin-bottom: 0;
 }
 .main-navigation .navbar-inner {
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
 }
 .main-navigation .menu-primary-container {
 }
