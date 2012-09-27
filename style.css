@@ -678,16 +678,21 @@ h2.box-widget-title {
 }
 #gallery {
   border: 1px solid #ddd;
+  padding: 10px;
 }
 #gallery ul.row-fluid {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 #gallery h3 {
   margin-left: 20px;
 }
-#gallery ul.row-fluid li {
+#gallery ul.row-fluid li#portfolio_wrap {
+  border: 1px solid #ddd;
   text-align: center;
+}
+#gallery ul.row-fluid li#portfolio_wrap .portfolio_item {
+  padding: 20px;
 }
 
 /*==================================== SLIDER ======================================================*/
