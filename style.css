@@ -636,14 +636,17 @@ h2.box-widget-title {
   display: inline-block;
   margin-bottom: 0;
 }
-#cc-carousel ul li .caption {
+#cc-carousel ul li .carousel_item {
+  border: 1px solid #ddd;
+}  
+#cc-carousel ul li .carousel_caption {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.5);
 }
-#cc-carousel ul li .caption h3 {
+#cc-carousel ul li .carousel_caption p {
   color: #fff;
   font-size: 1em;
   font-weight: normal;
