@@ -63,7 +63,7 @@
 	<?php do_action('cyberchimps_before_navigation'); ?>
 
 	<nav id="navigation" class="row-fluid" role="navigation">
-  	<div class="main-navigation navbar">
+  	<div class="main-navigation navbar navbar-inverse">
       <div class="navbar-inner">
         <?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
       </div><!-- .navbar-inner .row-fluid -->
