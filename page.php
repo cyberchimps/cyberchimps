@@ -23,9 +23,11 @@ function page_section_order_action() {
 	global $post;
 	
 	$page_section_order = get_post_meta($post->ID, 'cyberchimps_page_section_order' , true);
-	
+	$slider_size = get_post_meta( $post->ID, 'cyberchimps_slider_size', true );
 	if ( is_array($page_section_order) ) {
 		foreach ( $page_section_order as $func) {
+			// checks if slider is selected at half size, if it is it removes it so we can display it above page content
+			$func = ( $func == 'page_slider' && $slider_size == 'half' ) ? '' : $func;
 			do_action($func);
 		}
 	}
