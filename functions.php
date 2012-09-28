@@ -324,7 +324,7 @@ function core_options_welcome( $text ){
 					
 					<p>If you want even more amazing new features <a href="http://cyberchimps.com" title="upgrade to Response Pro">upgrade to Response Pro</a> which includes a Custom Feature Slides, Product Element, Image Carousel, Widgetized Boxes, Callout section, expanded typography including TypeKit support, and many more powerful new features. Please visit CyberChimps.com to learn more!</p>
 					
-					<p>We tried to make Response as easy to use as possible, but if you still need help please read the documentation, and visit our support forum.</p>
+					<p>We tried to make Response as easy to use as possible, but if you still need help please read the <a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank">documentation</a>, and visit our <a href="http://cyberchimps.com/forum/pro/" target="_blank">support forum</a>.</p>
 					
 					<p>Thank you for using Response.</p>
 					
