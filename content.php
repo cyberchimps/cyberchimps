@@ -70,8 +70,6 @@
 		<?php cyberchimps_post_comments() ?>
 		
 		<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
-    
-    <?php cyberchimps_article_share() ?>
 		
 	</footer><!-- #entry-meta -->
 	

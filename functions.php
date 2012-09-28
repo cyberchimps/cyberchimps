@@ -68,7 +68,7 @@ function cyberchimps_create_layout() {
 	} elseif ( is_page() ) {
 		// TODO: Change so that option is not saved as an array
 		$page_sidebar = get_post_meta($post->ID, 'cyberchimps_page_sidebar');
-		$layout_type = $page_sidebar[0];
+		$layout_type = ( isset( $page_sidebar[0] ) ) ? $page_sidebar[0] : 'right_sidebar';
 		
 	} elseif ( is_archive() ) {
 		$layout_type = cyberchimps_get_option('archive_sidebar_options');

@@ -93,53 +93,37 @@ header p {
  	margin-bottom: 20px; 
 }
 .main-navigation.navbar {
-	border: 1px solid #ddd;
 	margin-bottom: 0;
-  background: #fff;
 }
 .main-navigation .navbar-inner {
-	background: transparent;
-  box-shadow: none;
-	border-radius: 0;
-	padding-left: 0;
-	padding-right: 0;
-	margin-bottom: -1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  padding-left: 0px;
 }
 .main-navigation .menu-primary-container {
-	padding-left: 20px;
-	padding-right: 20px;
 }
 .main-navigation .nav > li > a {
-  color: #08c;
-  text-shadow: none;
 }
 .main-navigation .nav > li > a:hover {
-  color:  #005580;
 }
 .main-navigation .nav .active > a,
 .main-navigation .nav .active > a:hover,
 .main-navigation .nav .current_page_item > a,
 .main-navigation .nav .current_page_item > a:hover {
-  color: #FFFFFF;
-  background: #0088CC;
 }
 .main-navigation .nav li.dropdown .dropdown-toggle .caret,
 .main-navigation .nav li.dropdown.open .caret {
-  border-top-color: #555;
-  border-bottom-color: #555;
 }
 .main-navigation .nav li ul li ul {
   list-style: none;
   margin-left: 0;
 }
 .main-navigation .nav li ul li ul li a{
-  padding-left: 18px;
+  padding-left: 24px;
 }
 .main-navigation .nav li.current_page_item {
-  background: #0088CC;
 }
 .main-navigation ul > li.current_page_item > a {
-  color: #FFFFFF;
 }
 .main-navigation .nav li.dropdown:hover ul.dropdown-menu {
   display: block;
@@ -636,14 +620,17 @@ h2.box-widget-title {
   display: inline-block;
   margin-bottom: 0;
 }
-#cc-carousel ul li .caption {
+#cc-carousel ul li .carousel_item {
+  border: 1px solid #ddd;
+}  
+#cc-carousel ul li .carousel_caption {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.5);
 }
-#cc-carousel ul li .caption h3 {
+#cc-carousel ul li .carousel_caption p {
   color: #fff;
   font-size: 1em;
   font-weight: normal;
@@ -678,16 +665,21 @@ h2.box-widget-title {
 }
 #gallery {
   border: 1px solid #ddd;
+  padding: 0 10px;
 }
 #gallery ul.row-fluid {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
 }
-#gallery h3 {
-  margin-left: 20px;
+#gallery h2 {
+  margin-top: 0;
 }
-#gallery ul.row-fluid li {
+#gallery ul.row-fluid li#portfolio_wrap {
+  border: 1px solid #ddd;
   text-align: center;
+}
+#gallery ul.row-fluid li#portfolio_wrap .portfolio_item {
+  padding: 20px;
 }
 
 /*==================================== SLIDER ======================================================*/
