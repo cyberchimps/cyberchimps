@@ -101,15 +101,15 @@ endif; // ends check for cyberchimps_comment()
 
 // TODO move customization of core to it's own folder
 // core options customization
-function core_options_welcome_header( $text ) {
+function cyberchimps_options_welcome_header( $text ) {
 	$text = __( 'Response', 'cyberchimps' );
 	return $text;
 }
-function core_options_welcome_sub_header( $text ){
+function cyberchimps_options_welcome_sub_header( $text ){
 	$text = __( 'Response Professional Responsive WordPress Theme', 'cyberchimps' );
 	return $text;
 }
-function core_options_welcome( $text ){
+function cyberchimps_options_welcome( $text ){
 	$text = 'Response Professional WordPress Theme
 
 					<p>Response offers the same advanced functionality as CyberChimps&#39; other WordPress Themes including a Responsive Design that responds automatically to mobile devices such as the iPhone, iPad, and Android. Response also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, Page Content, Twitter bar and Widgetized boxes. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website.</p>
@@ -125,6 +125,23 @@ function core_options_welcome( $text ){
 					<p>A Professional WordPress Theme</p>';
 	return $text;
 }
-add_filter( 'cyberchimps_welcome_heading', 'core_options_welcome_header' );
-add_filter( 'cyberchimps_welcome_sub_heading', 'core_options_welcome_sub_header' );
-add_filter( 'cyberchimps_welcome_description', 'core_options_welcome', 1 );
+add_filter( 'cyberchimps_welcome_heading', 'cyberchimps_options_welcome_header' );
+add_filter( 'cyberchimps_welcome_sub_heading', 'cyberchimps_options_welcome_sub_header' );
+add_filter( 'cyberchimps_welcome_description', 'cyberchimps_options_welcome', 1 );
+
+//add theme upgrade bar details
+function cyberchimps_upgrade_bar_theme() {
+	$text = 'Response';
+	return $text;
+}
+function cyberchimps_upgrade_bar_pro_link() {
+	$url = 'http://cyberchimps.com/responsepro/';
+	return $url;
+}
+function cyberchimps_upgrade_bar_pro_title() {
+	$text = 'Response Pro';
+	return $text;
+}
+add_filter( 'cyberchimps_upgrade_theme_name', 'cyberchimps_upgrade_bar_theme' );
+add_filter( 'cyberchimps_upgrade_link', 'cyberchimps_upgrade_bar_pro_link' );
+add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title' );
