@@ -99,35 +99,23 @@ function cyberchimps_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for cyberchimps_comment()
 
-// TODO move customization of core to it's own folder
-// core options customization
-function cyberchimps_options_welcome_header( $text ) {
-	$text = __( 'Response', 'cyberchimps' );
-	return $text;
-}
-function cyberchimps_options_welcome_sub_header( $text ){
-	$text = __( 'Response Professional Responsive WordPress Theme', 'cyberchimps' );
-	return $text;
-}
-function cyberchimps_options_welcome( $text ){
-	$text = 'Response Professional WordPress Theme
 
-					<p>Response offers the same advanced functionality as CyberChimps&#39; other WordPress Themes including a Responsive Design that responds automatically to mobile devices such as the iPhone, iPad, and Android. Response also includes Drag and Drop Elements such as the Portfolio Element, Responsive Feature Slider, Page Content, Twitter bar and Widgetized boxes. All of which can be used on a per-page basis using Drag and Drop Page Options that also include sidebar and layout options giving you the power to control the look and feel of every page of your website.</p>
-					
-					<p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
-					
-					<p>If you want even more amazing new features <a href="http://cyberchimps.com" title="upgrade to Response Pro">upgrade to Response Pro</a> which includes a Custom Feature Slides, Product Element, Image Carousel, Widgetized Boxes, Callout section, expanded typography including TypeKit support, and many more powerful new features. Please visit CyberChimps.com to learn more!</p>
-					
-					<p>We tried to make Response as easy to use as possible, but if you still need help please read the <a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank">documentation</a>, and visit our <a href="http://cyberchimps.com/forum/pro/" target="_blank">support forum</a>.</p>
-					
-					<p>Thank you for using Response.</p>
-					
-					<p>A Professional WordPress Theme</p>';
+// core options customization
+function cyberchimps_options_theme_name(){
+	$text = 'Response';
 	return $text;
 }
-add_filter( 'cyberchimps_welcome_heading', 'cyberchimps_options_welcome_header' );
-add_filter( 'cyberchimps_welcome_sub_heading', 'cyberchimps_options_welcome_sub_header' );
-add_filter( 'cyberchimps_welcome_description', 'cyberchimps_options_welcome', 1 );
+function cyberchimps_options_documentation_url() {
+	$url = 'http://cyberchimps.com/responsepro/docs/';
+	return $url;
+}
+function cyberchimps_options_support_forum() {
+	$url = 'http://cyberchimps.com/forum/free/';
+	return $url;
+}
+add_filter( 'cyberchimps_current_theme_name', 'cyberchimps_options_theme_name', 1 );
+add_filter( 'cyberchimps_documentation', 'cyberchimps_options_documentation_url' );
+add_filter( 'cyberchimps_support_forum', 'cyberchimps_options_support_forum' );
 
 //add theme upgrade bar details
 function cyberchimps_upgrade_bar_theme() {
