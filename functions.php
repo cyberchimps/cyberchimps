@@ -143,3 +143,34 @@ function cyberchimps_skin_color_options( $options ) {
 	return $options;
 }
 add_filter( 'cyberchimps_skin_color', 'cyberchimps_skin_color_options' );
+
+// theme specific background images
+function cyberchimps_background_image( $options ) {
+	$imagepath =  get_template_directory_uri() . '/core/lib/images/';
+	$options = array(
+			'none' => $imagepath . 'backgrounds/thumbs/none.png',
+			'noise' => $imagepath . 'backgrounds/thumbs/noise.png',
+			'blue' => $imagepath . 'backgrounds/thumbs/blue.png',
+			'dark' => $imagepath . 'backgrounds/thumbs/dark.png',
+			'space' => $imagepath . 'backgrounds/thumbs/space.png'
+			);
+	return $options;
+}
+add_filter( 'cyberchimps_background_image', 'cyberchimps_background_image' );
+
+// theme specific typography options
+function cyberchimps_typography_sizes( $sizes ) {
+	$sizes = array( '8','9','10','12','14','16','20' );
+	return $sizes;
+}
+function cyberchimps_typography_faces( $faces ) {
+	$faces = array( 'Helvetica Neue' => 'Helvetica Neue','Arial' => 'Arial' );
+	return $faces;
+}
+function cyberchimps_typography_styles( $styles ) {
+	$styles = array( 'normal' => 'Normal','bold' => 'Bold' );
+	return $styles;
+}
+add_filter( 'cyberchimps_typography_sizes', 'cyberchimps_typography_sizes' );
+add_filter( 'cyberchimps_typography_faces', 'cyberchimps_typography_faces' );
+add_filter( 'cyberchimps_typography_styles', 'cyberchimps_typography_styles' );
