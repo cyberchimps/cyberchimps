@@ -28,7 +28,7 @@
     		<ul>
 				<li>Thank you for using Cyber Chimps Framework!</li>
 				<li>&nbsp;</li>
-				<li>We designed Cyber Chimps Framework to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/Cyber Chimps Framework/docs/">precise documentation</a>.</li>
+				<li>We designed Cyber Chimps Framework to be as user friendly as possible, but if you do run into trouble we provide a <a href="<?php echo apply_filters( 'cyberchimps_support_forum', 'http://cyberchimps.com' ); ?>">support forum</a>, and <a href="http://www.cyberchimps.com/Cyber Chimps Framework/docs/">precise documentation</a>.</li>
 				<li>&nbsp;</li>
 				<li>(To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Widgets)</li>
 			</ul>
