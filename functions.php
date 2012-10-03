@@ -133,3 +133,13 @@ function cyberchimps_upgrade_bar_pro_title() {
 add_filter( 'cyberchimps_upgrade_theme_name', 'cyberchimps_upgrade_bar_theme' );
 add_filter( 'cyberchimps_upgrade_link', 'cyberchimps_upgrade_bar_pro_link' );
 add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title' );
+
+//theme specific skin options in array. Must always include option default
+function cyberchimps_skin_color_options( $options ) {
+	$options = array(  
+			'default' => __('Default', 'cyberchimps'),
+			'classic' => __('Classic', 'cyberchimps')
+			);
+	return $options;
+}
+add_filter( 'cyberchimps_skin_color', 'cyberchimps_skin_color_options' );
