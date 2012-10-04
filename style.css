@@ -141,7 +141,7 @@ header #search #searchform {
 /********************************************************************************************************************/
 
 .container {
-  background: #fff;
+  background: transparent;
 }
 article.post, article.page, article.attachment {
   margin-bottom: 15px;
@@ -608,7 +608,15 @@ h2.box-widget-title {
 }
 .box {
     margin-bottom: 20px;
-  }
+}
+
+/*==================================== BOXES ======================================================*/
+
+.box a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
 /*==================================== CAROUSEL ===================================================*/
 
