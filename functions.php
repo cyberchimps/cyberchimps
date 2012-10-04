@@ -100,22 +100,37 @@ function cyberchimps_comment( $comment, $args, $depth ) {
 endif; // ends check for cyberchimps_comment()
 
 
-// core options customization
+// core options customization Names and URL's
+//Theme Name
 function cyberchimps_options_theme_name(){
 	$text = 'Response';
 	return $text;
 }
+//Doc's URL
 function cyberchimps_options_documentation_url() {
 	$url = 'http://cyberchimps.com/responsepro/docs/';
 	return $url;
 }
+// Support Forum URL
 function cyberchimps_options_support_forum() {
 	$url = 'http://cyberchimps.com/forum/free/';
+	return $url;
+}
+//Page Options Help URL
+function cyberchimps_options_page_options_help() {
+	$url = 'http://cyberchimps.com/responsepro/docs/';
+	return $url;
+}
+// Slider Options Help URL
+function cyberchimps_options_slider_options_help() {
+	$url = 'http://cyberchimps.com/responsepro/docs/';
 	return $url;
 }
 add_filter( 'cyberchimps_current_theme_name', 'cyberchimps_options_theme_name', 1 );
 add_filter( 'cyberchimps_documentation', 'cyberchimps_options_documentation_url' );
 add_filter( 'cyberchimps_support_forum', 'cyberchimps_options_support_forum' );
+add_filter( 'cyberchimps_page_options_help', 'cyberchimps_options_page_options_help' );
+add_filter( 'cyberchimps_slider_options_help', 'cyberchimps_options_slider_options_help' );
 
 //add theme upgrade bar details
 function cyberchimps_upgrade_bar_theme() {

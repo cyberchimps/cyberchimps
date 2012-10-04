@@ -19,12 +19,8 @@
 get_header(); ?>
 
 <?php do_action( 'cyberchimps_before_container' ); ?>
-
-
 	
-	<?php do_action( 'cyberchimps_blog_content' ); ?>
-	
-	
+<?php do_action( 'cyberchimps_blog_content' ); ?>	
 
 <?php do_action( 'cyberchimps_after_container'); ?>
 
