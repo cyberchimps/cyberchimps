@@ -21,10 +21,7 @@ $options = get_option('cyberchimps_options');
 
 // FIXME: Fix documentation
 // Load Core
-require_once( get_template_directory() . '/core/init.php' );
-
-// Load Pro
-require_once( get_template_directory() . '/pro/init.php' );
+require_once( get_template_directory() . '/cyberchimps/init.php' );
 
 // Notify user of theme update on "Updates" page in Dashboard.
 require_once ( get_template_directory() . '/inc/update.php' );
@@ -164,7 +161,7 @@ add_filter( 'cyberchimps_skin_color', 'cyberchimps_skin_color_options' );
 
 // theme specific background images
 function cyberchimps_background_image( $options ) {
-	$imagepath =  get_template_directory_uri() . '/core/lib/images/';
+	$imagepath =  get_template_directory_uri() . '/cyberchimps/lib/images/';
 	$options = array(
 			'none' => $imagepath . 'backgrounds/thumbs/none.png',
 			'noise' => $imagepath . 'backgrounds/thumbs/noise.png',
