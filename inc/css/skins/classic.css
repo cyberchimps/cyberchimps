@@ -8,24 +8,24 @@ Default Skin Color settings
 /********************************************************************************************************************/
 
 .main-navigation.navbar {
- 	margin-bottom: 0;
-  background: #08C;
+  margin-bottom: 0;
+  background: #fff;
  }
  .main-navigation .navbar-inner {
 	background: transparent;
-  box-shadow: none;
+	box-shadow: none;
 	border-radius: 0;
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: -1px;
-  border: 1px solid #08c;
+  	border: 1px solid #ddd;
  }
  .main-navigation .menu-primary-container {
 	padding-left: 20px;
 	padding-right: 20px;
  }
  .main-navigation .nav > li > a {
-  color: #fff;
+  color: #6098bf;
   text-shadow: none;
  }
  .main-navigation .nav > li > a:hover {

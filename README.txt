@@ -1,3 +1,6 @@
-CyberChimps Core Framework Read Me File
+CyberChimps Lite Framework 
+==========================
 
-TODO: Write Content
+Visit http://CyberChimps.com for more information and instructions.
+
+https://github.com/cyberchimps/cyberchimpslite
