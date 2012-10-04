@@ -23,6 +23,7 @@ function page_section_order_action() {
 	global $post;
 	
 	$page_section_order = get_post_meta($post->ID, 'cyberchimps_page_section_order' , true);
+	print_r( $page_section_order );
 	$slider_size = get_post_meta( $post->ID, 'cyberchimps_slider_size', true );
 	if ( is_array($page_section_order) ) {
 		foreach ( $page_section_order as $func) {
