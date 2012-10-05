@@ -106,6 +106,16 @@ function cyberchimps_options_theme_name(){
 	$text = 'Response';
 	return $text;
 }
+//Theme Pro Name
+function cyberchimps_upgrade_bar_pro_title() {
+	$text = 'Response Pro';
+	return $text;
+}
+//Upgrade link
+function cyberchimps_upgrade_bar_pro_link() {
+	$url = 'http://cyberchimps.com/responsepro/';
+	return $url;
+}
 //Doc's URL
 function cyberchimps_options_documentation_url() {
 	$url = 'http://cyberchimps.com/responsepro/docs/';
@@ -127,27 +137,36 @@ function cyberchimps_options_slider_options_help() {
 	return $url;
 }
 add_filter( 'cyberchimps_current_theme_name', 'cyberchimps_options_theme_name', 1 );
+add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title' );
+add_filter( 'cyberchimps_upgrade_link', 'cyberchimps_upgrade_bar_pro_link' );
 add_filter( 'cyberchimps_documentation', 'cyberchimps_options_documentation_url' );
 add_filter( 'cyberchimps_support_forum', 'cyberchimps_options_support_forum' );
 add_filter( 'cyberchimps_page_options_help', 'cyberchimps_options_page_options_help' );
 add_filter( 'cyberchimps_slider_options_help', 'cyberchimps_options_slider_options_help' );
 
-//add theme upgrade bar details
-function cyberchimps_upgrade_bar_theme() {
-	$text = 'Response';
-	return $text;
+// upgrade bar for free themes
+function cyberchimps_upgrade_bar() { ?>
+	<div class="upgrade-callout">
+		<p><img src="<?php echo get_template_directory_uri() ;?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps" />
+    <?php printf( __( 'Welcome to %1$s! Learn more now about upgrading to <a href="%2$s" target="_blank" title="%3$s">%3$s</a> today.', 'cyberchimps' ),
+		apply_filters( 'cyberchimps_options_theme_name', 'CyberChimps' ),
+		apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' ),
+		apply_filters( 'cyberchimps_upgrade_pro_title', 'Pro' )
+		 ); ?>	
+		</p>
+		<div class="social-container">
+		<div class="social">
+			<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div class="social">
+			<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcyberchimps.com%2F&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		</div>
+	</div>
+<?php
 }
-function cyberchimps_upgrade_bar_pro_link() {
-	$url = 'http://cyberchimps.com/responsepro/';
-	return $url;
-}
-function cyberchimps_upgrade_bar_pro_title() {
-	$text = 'Response Pro';
-	return $text;
-}
-add_filter( 'cyberchimps_upgrade_theme_name', 'cyberchimps_upgrade_bar_theme' );
-add_filter( 'cyberchimps_upgrade_link', 'cyberchimps_upgrade_bar_pro_link' );
-add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title' );
+add_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar' );
 
 //theme specific skin options in array. Must always include option default
 function cyberchimps_skin_color_options( $options ) {
