@@ -162,6 +162,9 @@ article.post, article.page, article.attachment {
 article {
   background: #fff;
 }
+.entry-header {
+  margin-top: 0;
+}
 .entry-summary {
   margin: 10px 0;
 }
@@ -209,7 +212,9 @@ blockquote cite:before {
 /*==================================== TAXONOMY ========================================================*/
 
 h2.entry-title {
+  margin-top: 0;
   margin-bottom: 5px;
+  line-height: 1em;
 }
 h2.entry-title a {
   color: #333333;
@@ -439,7 +444,9 @@ ol.commentlist li.odd {
 }
 h3.widget-title {
   font-weight: normal;
+  margin-top: 0;
   margin-bottom: 10px;
+  line-height: 1em;
 }
 .widget-container ul, .widget ul {
   margin-left: 5px;
