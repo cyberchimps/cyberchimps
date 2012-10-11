@@ -27,7 +27,7 @@ if(function_exists('wp_get_theme')){
     $theme_data = wp_get_theme(get_option('template'));
     $theme_version = $theme_data->Version;
 } else {
-    $theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
+    $theme_data = get_theme_data( get_template_directory() . '/style.css');
     $theme_version = $theme_data['Version'];
 }
 $theme_base = get_option('template');
@@ -49,9 +49,9 @@ function chimps_check_for_update($checked_data)
 		'body' => array(
 			'action' => 'theme_update', 
 			'request' => serialize($request),
-			'api-key' => md5(get_bloginfo('url'))
+			'api-key' => md5(home_url())
 		),
-		'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo('url')
+		'user-agent' => 'WordPress/' . $wp_version . '; ' . home_url()
 	);
 
 	$raw_response = wp_remote_post($api_url, $send_for_check);

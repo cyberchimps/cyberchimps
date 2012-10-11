@@ -106,7 +106,7 @@ get_header(); ?>
 	<?php do_action( 'cyberchimps_after_content'); ?>
 		
 	</div><!-- #content -->
-	
+  	
 	<?php do_action( 'cyberchimps_after_content_container'); ?>
 		
 </div><!-- #container .row-fluid-->

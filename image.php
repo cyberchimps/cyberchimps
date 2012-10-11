@@ -61,7 +61,7 @@ get_header(); ?>
 					<div class="entry-attachment">
 						<div class="attachment">
 
-							<a href="<?php get_the_attachment_link( $post->ID, 'fullsize' ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
+							<a href="<?php wp_get_attachment_link( $post->ID, 'fullsize' ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
 								$attachment_size = apply_filters( 'cyberchimps_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 								echo wp_get_attachment_image( $post->ID, $attachment_size );
 							?></a>

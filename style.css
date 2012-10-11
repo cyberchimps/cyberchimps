@@ -5,6 +5,7 @@ Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
 Description: CyberChimps WordPress Theme Framework featuring Twitter's Bootstrap, Response Theme Options, and Drag and Drop Elements.
 Version: 1.0 Public Beta 1 (10/4/12)
+Tags: white, light, two-columns, fixed-width, custom-header, custom-menu, threaded-comments, sticky-post, responsive
 License: GNU General Public License
 License URI: http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
 */
@@ -194,6 +195,7 @@ blockquote cite:before {
 .more-content {
   margin-bottom: 15px;
   padding: 10px;
+  background: #fff;
   border: 1px solid #DDD;
 }
 .previous-post {
@@ -348,6 +350,7 @@ footer.entry-meta {
 .comments-area {
   margin-bottom: 15px;
   padding: 15px;
+  background: #fff;
   border: 1px solid #ddd;
 }
 #comments .navigation {
@@ -578,6 +581,15 @@ h3.widget-title {
 	text-align: right;
   margin-bottom: 20px;
 }
+
+
+/********************************************************************************************************************/
+/******************************************** WORDPRESS DEFAULTS ****************************************************/
+/********************************************************************************************************************/
+
+.sticky{}
+.gallery-caption{}
+.bypostauthor{}
 
 /********************************************************************************************************************/
 /******************************************** ELEMENTS **************************************************************/
