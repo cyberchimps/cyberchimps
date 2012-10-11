@@ -607,6 +607,8 @@ h3.widget-title {
 
 .box {
   padding: 15px;
+  margin-bottom: 20px;
+  background: #fff;
   border: 1px solid #ddd;
 }
 h2.box-widget-title {
@@ -616,9 +618,6 @@ h2.box-widget-title {
 .box p {
   font-size: 1.1em;
   line-height: 1.2em;
-}
-.box {
-    margin-bottom: 20px;
 }
 
 /*==================================== BOXES ======================================================*/
