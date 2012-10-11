@@ -689,15 +689,13 @@ h2.box-widget-title {
   margin-bottom: 20px;
 }
 #gallery {
+  background: #fff;
   border: 1px solid #ddd;
-  padding: 0 10px;
+  padding: 10px 10px 0;
 }
 #gallery ul.row-fluid {
   margin: 0 0 10px 0;
   padding: 0;
-}
-#gallery h2 {
-  margin-top: 0;
 }
 #gallery ul.row-fluid li#portfolio_wrap {
   border: 1px solid #ddd;
@@ -719,6 +717,7 @@ h2.box-widget-title {
   margin-bottom: 20px;
 }
 #twitter-bar {
+  background: #fff;
   border: 1px solid #ddd;
 	padding: 10px;
 }
