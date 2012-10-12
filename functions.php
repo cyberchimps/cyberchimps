@@ -99,6 +99,23 @@ function cyberchimps_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for cyberchimps_comment()
 
+// set up next and previous post links for lite themes only
+function cyberchimps_next_previous_posts() {
+	if( get_next_posts_link() || get_previous_posts_link() ): ?>
+	<div class="more-content">
+		<div class="row-fluid">
+			<div class="span6 previous-post">
+				<?php previous_posts_link(); ?>
+			</div>
+			<div class="span6 next-post">
+				<?php next_posts_link(); ?>
+			</div>
+		</div>
+	</div>
+<?php
+	endif;
+}
+add_action( 'cyberchimps_after_content', 'cyberchimps_next_previous_posts' );
 
 // core options customization Names and URL's
 //Theme Name
