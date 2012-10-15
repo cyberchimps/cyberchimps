@@ -29,7 +29,7 @@
 <!--[if IE 9]>
 <html class="ie ie9 lte9" <?php language_attributes(); ?>> 
 <![endif]-->
-<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if gt IE 9]>  <html <?php language_attributes(); ?>> <![endif]-->
 <!--[if !IE]><!--> 
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
