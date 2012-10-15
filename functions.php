@@ -185,6 +185,15 @@ function cyberchimps_upgrade_bar() { ?>
 }
 add_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar' );
 
+// Branding images and defaults
+
+// Banner default
+function cyberchimps_banner_default() {
+	$url = '/images/branding/banner.jpg';
+	return $url;
+}
+add_filter( 'cyberchimps_banner_img', 'cyberchimps_banner_default' );
+
 //theme specific skin options in array. Must always include option default
 function cyberchimps_skin_color_options( $options ) {
 	$options = array(  
