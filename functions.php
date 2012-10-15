@@ -125,7 +125,7 @@ function cyberchimps_options_theme_name(){
 }
 //Theme Pro Name
 function cyberchimps_upgrade_bar_pro_title() {
-	$text = 'Response Pro';
+	$text = 'Response Pro Upgrade';
 	return $text;
 }
 //Upgrade link
