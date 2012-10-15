@@ -63,11 +63,21 @@
 	<?php do_action('cyberchimps_before_navigation'); ?>
 
 	<nav id="navigation" class="row-fluid" role="navigation">
-  	<div class="main-navigation navbar navbar-inverse">
-      <div class="navbar-inner">
-        <?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
-      </div><!-- .navbar-inner .row-fluid -->
-    </div><!-- main-navigation navbar -->
+      <div class="main-navigation navbar navbar-inverse">
+        <div class="navbar-inner">
+        	<div class="container">
+  					<div class="nav-collapse collapse">
+          		<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
+            </div><!-- collapse -->
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+          </div><!-- container -->
+        </div><!-- .navbar-inner .row-fluid -->
+      </div><!-- main-navigation navbar -->
 	</nav><!-- #navigation -->
 	
 	<?php do_action('cyberchimps_after_navigation'); ?>

@@ -106,7 +106,6 @@ header #search #searchform {
 .main-navigation .navbar-inner {
   -webkit-border-radius: 1px;
   border-radius: 1px;
-  padding-left: 0px;
 }
 .main-navigation .menu-primary-container {
 }
@@ -126,6 +125,9 @@ header #search #searchform {
   list-style: none;
   margin-left: 0;
 }
+.main-navigation .nav li ul > li > ul {
+ 	margin-left: 10px; 
+}
 .main-navigation .nav li ul li ul li a{
   padding-left: 24px;
 }
@@ -135,6 +137,10 @@ header #search #searchform {
 }
 .main-navigation .nav li.dropdown:hover ul.dropdown-menu {
   display: block;
+}
+.main-navigation .nav li ul li a:hover {
+  color: #08C;
+  background: none;
 }
 
 /********************************************************************************************************************/
