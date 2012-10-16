@@ -31,14 +31,8 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template( '', true );
-			?>
-			
-			<div class="more-content">
+      
+      <div class="more-content">
 				<div class="row-fluid">
 					<div class="span6 previous-post">
 						<?php previous_post_link(); ?>
@@ -48,6 +42,12 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
+
+			<?php
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() )
+					comments_template( '', true );
+			?>
 
 		<?php endwhile; // end of the loop. ?>
 	
