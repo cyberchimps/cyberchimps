@@ -25,13 +25,6 @@
 	 */
 	if ( post_password_required() )
 		return;
-		
-	/*
-	 * If the current post does not have comments open then we will
-	 * return early without loading the comments.
-	 */
-	if ( !comments_open() )
-		return;
 ?>
 
 	<div id="comments" class="comments-area">
