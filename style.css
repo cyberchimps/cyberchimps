@@ -466,6 +466,12 @@ h3.widget-title {
   line-height: 1.8em;
   list-style: none;
 }
+table#wp-calendar {
+  width: 100%;
+}
+table#wp-calendar td {
+  text-align: center;
+}
 
 /*==================================== SEARCH FORM ====================================================*/
 
