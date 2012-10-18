@@ -50,6 +50,12 @@
       <?php remove_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
 		</div><!-- .entry-summary -->
     
+	<?php elseif( is_page() ): ?>
+		<div class="entry-summary">
+			<?php cyberchimps_featured_image(); ?>
+			<?php the_content(); ?>
+		</div><!-- .entry-summary -->
+	
 	<?php else : ?>
   	<div class="entry-summary">
     <?php cyberchimps_featured_image(); ?>
