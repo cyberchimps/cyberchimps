@@ -15,7 +15,6 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
- global $options;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
