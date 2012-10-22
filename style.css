@@ -650,9 +650,10 @@ h2.box-widget-title {
 .box a {
   display: block;
   width: 100%;
-}
-.box a img {
   text-align: center;
+}
+.box-no-url {
+	cursor: default;
 }
 
 /*==================================== CAROUSEL ===================================================*/
