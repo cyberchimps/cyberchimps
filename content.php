@@ -15,6 +15,7 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,7 +23,30 @@
 	<header class="entry-header">
 		
 		<?php cyberchimps_post_format_icon(); ?>
-		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a></h2>  
+		<h2 class="entry-title">
+			<?php
+			if ( 'page' == get_post_type() ) : 
+				
+				// get the page title toggle option
+				 $page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true);
+				 
+				if( $page_title == "1" || $page_title == "" ) :
+					( get_the_title() )? the_title() : the_permalink();
+				endif;
+			else :
+				if( 'post' == get_post_type() && is_single() ) :
+				
+					// get the post title toggle option
+					$post_title = cyberchimps_option( 'single_post_title' );
+					if( $post_title == "1" ) : ?>
+						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
+			<?php	endif;
+				else : ?>
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
+			<?php
+				endif;
+			endif; ?>
+		</h2>
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -48,7 +72,7 @@
       <?php remove_filter( 'excerpt_length', 'cyberchimps_search_excerpt_length', 999 ); ?>
       <?php remove_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
 		</div><!-- .entry-summary -->
-    
+
 	<?php elseif( is_page() ): ?>
 		<div class="entry-summary">
 			<?php cyberchimps_featured_image(); ?>
@@ -62,7 +86,7 @@
 		</div><!-- .entry-summary -->
 		
 	<?php endif; ?>
-	
+
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
     
@@ -78,4 +102,4 @@
 		
 	</footer><!-- #entry-meta -->
 	
-</article><!-- #post -->
+</article><!-- #post-<?php the_ID(); ?> -->
