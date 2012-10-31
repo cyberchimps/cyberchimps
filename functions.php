@@ -221,7 +221,26 @@ function cyberchimps_typography_sizes( $sizes ) {
 	return $sizes;
 }
 function cyberchimps_typography_faces( $faces ) {
-	$faces = array( 'Helvetica Neue' => 'Helvetica Neue','Arial' => 'Arial' );
+	$faces = array(
+				'Arial, Helvetica, sans-serif'						 => 'Arial',
+				'Arial Black, Gadget, sans-serif'					 => 'Arial Black',
+				'Comic Sans MS, cursive'							 => 'Comic Sans MS',
+				'Courier New, monospace'							 => 'Courier New',
+				'Georgia, serif'									 => 'Georgia',
+				'Impact, Charcoal, sans-serif'						 => 'Impact',
+				'Lucida Console, Monaco, monospace'					 => 'Lucida Console',
+				'Lucida Sans Unicode, Lucida Grande, sans-serif'	 => 'Lucida Sans Unicode',
+				'Palatino Linotype, Book Antiqua, Palatino, serif'	 => 'Palatino Linotype',
+				'Tahoma, Geneva, sans-serif'						 => 'Tahoma',
+				'Times New Roman, Times, serif'						 => 'Times New Roman',
+				'Trebuchet MS, sans-serif'							 => 'Trebuchet MS',
+				'Verdana, Geneva, sans-serif'						 => 'Verdana',
+				'Symbol'											 => 'Symbol',
+				'Webdings'											 => 'Webdings',
+				'Wingdings, Zapf Dingbats'							 => 'Wingdings',
+				'MS Sans Serif, Geneva, sans-serif'					 => 'MS Sans Serif',
+				'MS Serif, New York, serif'							 => 'MS Serif',
+				);
 	return $faces;
 }
 function cyberchimps_typography_styles( $styles ) {
