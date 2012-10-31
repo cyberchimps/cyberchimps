@@ -68,7 +68,14 @@
         	<div class="container">
   					<div class="nav-collapse collapse">
           		<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
-            </div><!-- collapse -->
+			</div><!-- collapse -->
+			
+			<?php if( cyberchimps_option( 'searchbar' ) == "1" ) : ?>
+				<div class="menu-searchbar">
+					<?php get_search_form(); ?>
+				</div>
+			<?php endif; ?>
+			
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
