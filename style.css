@@ -467,7 +467,9 @@ h3.widget-title {
   list-style: none;
 }
 table#wp-calendar {
-  width: 100%;
+  width: 14.28571428571429%;
+	padding: 5px 0;
+  text-align: center;
 }
 table#wp-calendar td {
   text-align: center;
