@@ -121,6 +121,10 @@ article.post, article.page, article.attachment {
 
 /*==================================== PORTFOLIO ==================================================*/
 
+#gallery {
+  border: 1px solid #ddd;
+}
+
 #gallery ul.row-fluid li#portfolio_wrap {
   border: 1px solid #ddd;
 }
