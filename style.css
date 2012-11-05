@@ -160,7 +160,6 @@ header #search #searchform {
 article.post, article.page, article.attachment {
   margin-bottom: 15px;
   padding: 15px;
-  border: 1px solid #ddd;
 }
 .entry-content {
   margin: 20px 0;
@@ -169,6 +168,12 @@ article.post, article.page, article.attachment {
   margin-top: 0;
   padding: 0;
   border: none;
+}
+.featured-image {
+margin-top: 4px;
+margin-right: 12px;
+margin-bottom: 10px;
+float: left;
 }
 
 /*==================================== POST AND PAGE CONTENT ===========================================*/
@@ -209,7 +214,6 @@ blockquote cite:before {
   margin-bottom: 15px;
   padding: 10px;
   background: #fff;
-  border: 1px solid #DDD;
 }
 .previous-post {
   text-align: left;
@@ -364,7 +368,6 @@ footer.entry-meta {
   margin-bottom: 15px;
   padding: 15px;
   background: #fff;
-  border: 1px solid #ddd;
 }
 #comments .navigation {
   padding: 0 0 18px 0;
@@ -453,7 +456,6 @@ ol.commentlist li.odd {
 /********************************************************************************************************************/
 
 .widget-container {
-  border: 1px solid #ddd;
   margin-bottom: 15px;
   padding: 15px;
   background: #fff;
@@ -599,7 +601,6 @@ table#wp-calendar td {
   border: none;
 }
 #footer-widget-container {
-  border: 1px solid #ddd;
   background: #fff;
 }
 .site-footer #copyright {
@@ -627,7 +628,6 @@ table#wp-calendar td {
 }
 #callout {
   padding: 20px;
-  border: 1px solid #ddd;
 }
 .callout-text h2.callout-title {
   font-size: 1.6em;
@@ -646,7 +646,6 @@ table#wp-calendar td {
   padding: 15px;
   margin-bottom: 20px;
   background: #fff;
-  border: 1px solid #ddd;
 }
 h2.box-widget-title {
   font-size: 1.4em;
@@ -671,7 +670,6 @@ h2.box-widget-title {
 /*==================================== CAROUSEL ===================================================*/
 
 #cc-carousel {
-  border: 1px solid #ddd;
   padding: 10px 50px;
 }
 #cc-carousel ul {
@@ -686,7 +684,6 @@ h2.box-widget-title {
   margin-bottom: 0;
 }
 #cc-carousel ul li .carousel_item {
-  border: 1px solid #ddd;
 }  
 #cc-carousel ul li .carousel_caption {
   position: absolute;
@@ -730,7 +727,6 @@ h2.box-widget-title {
 }
 #gallery {
   background: #fff;
-  border: 1px solid #ddd;
   padding: 10px 10px 0;
 }
 #gallery ul.row-fluid {
@@ -738,7 +734,6 @@ h2.box-widget-title {
   padding: 0;
 }
 #gallery ul.row-fluid li#portfolio_wrap {
-  border: 1px solid #ddd;
   text-align: center;
 }
 #gallery ul.row-fluid li#portfolio_wrap .portfolio_item {
@@ -748,7 +743,6 @@ h2.box-widget-title {
 /*==================================== SLIDER ======================================================*/
 
 #slider {
-  border: 1px solid #ddd;
 }
 
 /*==================================== TWITTER =====================================================*/
@@ -758,14 +752,12 @@ h2.box-widget-title {
 }
 #twitter-bar {
   background: #fff;
-  border: 1px solid #ddd;
 	padding: 10px;
 }
 
 /*==================================== BREADCRUMBS =================================================*/
 
 .breadcrumbs {
-  border: 1px solid #ddd;
   margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 1.1em;
