@@ -63,7 +63,7 @@
 	<?php do_action('cyberchimps_before_navigation'); ?>
 
 	<nav id="navigation" class="row-fluid" role="navigation">
-      <div class="main-navigation navbar navbar-inverse">
+      <div class="main-navigation navbar<?php echo ( cyberchimps_option( 'cyberchimps_skin_color' ) == 'default' ) ? ' navbar-inverse' : ''; ?>">
         <div class="navbar-inner">
         	<div class="container">
   					<div class="nav-collapse collapse">
