@@ -159,7 +159,7 @@ header #search #searchform {
 }
 article.post, article.page, article.attachment {
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 20px;
 }
 .entry-content {
   margin: 20px 0;
@@ -234,6 +234,7 @@ h2.entry-title {
   margin-top: 0;
   margin-bottom: 5px;
   line-height: 1em;
+	font-size: 1.6em;
 }
 h2.entry-title a {
   color: #333333;
@@ -457,11 +458,12 @@ ol.commentlist li.odd {
 
 .widget-container {
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 20px;
   background: #fff;
 }
 h3.widget-title {
-  font-weight: normal;
+	font-size: 1.4em;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 10px;
   line-height: 1em;
@@ -646,7 +648,7 @@ table#wp-calendar td {
 /*==================================== WIDGET BOXES ===============================================*/
 
 .box {
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 20px;
   background: #fff;
 }
@@ -730,10 +732,10 @@ h2.box-widget-title {
 }
 #gallery {
   background: #fff;
-  padding: 10px 10px 0;
+  padding: 20px;
 }
 #gallery ul.row-fluid {
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 0;
 }
 #gallery ul.row-fluid li#portfolio_wrap {
@@ -755,7 +757,7 @@ h2.box-widget-title {
 }
 #twitter-bar {
   background: #fff;
-	padding: 10px;
+	padding: 20px;
 }
 
 /*==================================== BREADCRUMBS =================================================*/
