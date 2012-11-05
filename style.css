@@ -489,7 +489,10 @@ table#wp-calendar td {
 
 /*==================================== SEARCH FORM ====================================================*/
 
-.error404 .searchform {
+#searchform {
+	margin-bottom: 5px;
+}
+/*.error404 .searchform {
   margin: 20px 0 20px 10px;
 }
 .searchform {
