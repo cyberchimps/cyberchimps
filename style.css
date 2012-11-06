@@ -773,3 +773,30 @@ h2.box-widget-title {
 .pagination ul li a {
   background: #fff;
 }
+
+/********************************************************************************************************************/
+/****************************************** MEDIA QUERIES ***********************************************************/
+/********************************************************************************************************************/
+
+/*==================================== PHONES ====================================================*/
+
+@media (max-width: 480px) { 
+	header#cc-header .span7 {
+		text-align: center;
+	}
+	header#cc-header .span5 {
+		text-align: center;
+	}
+	header#cc-header .span5 div.icons a {
+		float: none;
+	}
+	header#cc-header .span5 div.blog-description {
+		float: none;
+	}
+	header#cc-header .span5 div.register {
+		float: none;
+	}
+	header#cc-header .span5 #searchform {
+		float: none;
+	}
+}
