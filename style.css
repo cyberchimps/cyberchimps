@@ -71,19 +71,28 @@ header #social .icons a {
 
 /*======================================= DETAILS =============================================*/
 
-header .contact_details {
+header#cc-header h1.site-title {
+	margin-bottom: 5px;
+}
+
+header#cc-header h2.site-description {
+	font-size: 14px;
+	margin: 0;
+}
+
+header#cc-header .contact_details {
   float: right;
 }
 
-header .register {
+header#cc-header .register {
   float: right;
 }
 
-header .blog_description {
+header#cc-header .blog_description {
   float: right; 
 }
 
-header p {
+header#cc-header p {
   font-size: 1.2em;
 }
 
