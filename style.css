@@ -105,6 +105,7 @@ header #search #searchform {
 	margin-bottom: 0;
 }
 .main-navigation .navbar-inner {
+	padding: 0;
   -webkit-border-radius: 1px;
   border-radius: 1px;
 }
