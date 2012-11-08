@@ -769,6 +769,23 @@ h2.box-widget-title {
   background: #fff;
 	padding: 20px;
 }
+#twitter-bar #twitter-text img {
+	float: left;
+	margin-top: -5px;
+}
+#twitter-bar #twitter-text p {
+	padding-left: 75px;
+}
+@media (max-width: 480px) { 
+	#twitter-bar #twitter-text img {
+		width: 30px;
+		height: 21px;
+		margin-top: 0;
+	}
+	#twitter-bar #twitter-text p {
+		padding-left: 40px;
+	}
+}
 
 /*==================================== BREADCRUMBS =================================================*/
 
