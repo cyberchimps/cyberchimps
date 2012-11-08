@@ -742,7 +742,7 @@ h2.box-widget-title {
 }
 #gallery {
   background: #fff;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 #gallery ul.row-fluid {
   margin: 0;
@@ -750,6 +750,7 @@ h2.box-widget-title {
 }
 #gallery ul.row-fluid li#portfolio_wrap {
   text-align: center;
+	margin-bottom: 20px;
 }
 #gallery ul.row-fluid li#portfolio_wrap .portfolio_item {
   padding: 20px;

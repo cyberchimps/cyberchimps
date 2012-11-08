@@ -125,6 +125,6 @@ article.post, article.page, article.attachment {
   border: 1px solid #ddd;
 }
 
-#gallery ul.row-fluid li#portfolio_wrap {
+#gallery ul.row-fluid li#portfolio_wrap img {
   border: 1px solid #ddd;
 }
