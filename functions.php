@@ -20,9 +20,6 @@
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
-// Notify user of theme update on "Updates" page in Dashboard.
-require_once ( get_template_directory() . '/inc/update.php' );
-
 // FIXME: Fix documentation
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
