@@ -119,7 +119,7 @@ function cyberchimps_options_theme_name(){
 }
 //Theme Pro Name
 function cyberchimps_upgrade_bar_pro_title() {
-	$text = 'CyberChimps Pro Upgrade';
+	$text = 'CyberChimps Pro';
 	return $text;
 }
 //Upgrade link
