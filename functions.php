@@ -107,6 +107,11 @@ function cyberchimps_next_previous_posts() {
 add_action( 'cyberchimps_after_content', 'cyberchimps_next_previous_posts' );
 
 // core options customization Names and URL's
+//Pro or Free
+function cyberchimps_theme_check() {
+	$level = 'free';
+	return $level;
+}
 //Theme Name
 function cyberchimps_options_theme_name(){
 	$text = 'CyberChimps';
