@@ -109,7 +109,7 @@ add_action( 'cyberchimps_after_content', 'cyberchimps_next_previous_posts' );
 // core options customization Names and URL's
 //Theme Name
 function cyberchimps_options_theme_name(){
-	$text = 'CyberChimps Lite';
+	$text = 'CyberChimps';
 	return $text;
 }
 //Theme Pro Name
@@ -155,7 +155,7 @@ function cyberchimps_upgrade_bar() { ?>
 	<div class="upgrade-callout">
 		<p><img src="<?php echo get_template_directory_uri() ;?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps" />
     <?php printf( __( 'Welcome to %1$s! Learn more now about upgrading to <a href="%2$s" target="_blank" title="%3$s">%3$s</a> today.', 'cyberchimps' ),
-		apply_filters( 'cyberchimps_options_theme_name', 'CyberChimps' ),
+		apply_filters( 'cyberchimps_current_theme_name', 'CyberChimps' ),
 		apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' ),
 		apply_filters( 'cyberchimps_upgrade_pro_title', 'Pro' )
 		 ); ?>	
@@ -230,8 +230,7 @@ add_filter( 'cyberchimps_banner_img', 'cyberchimps_banner_default' );
 //theme specific skin options in array. Must always include option default
 function cyberchimps_skin_color_options( $options ) {
 	$options = array(  
-			'default' => __('Default', 'cyberchimps'),
-			'classic' => __('Classic', 'cyberchimps')
+			'default' => __('Default', 'cyberchimps')
 			);
 	return $options;
 }
