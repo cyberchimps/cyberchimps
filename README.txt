@@ -17,6 +17,8 @@ Slimbox is licensed under the MIT license - http://www.opensource.org/licenses/m
 
 jQuery UI Touch Punch is dual licensed under the MIT or GPL Version 2 licenses.
 
+CSS3PIE is bundled with this theme and adds some CSS3 styles to ie versions licensed under GNU General Public License v2.0 - http://www.gnu.org/licenses/gpl-2.0.html
+
 -------------------------------------------------------------------------------------------------
 
 For updated documentation, walkthroughs, and support please visit http://cyberchimps.com/
