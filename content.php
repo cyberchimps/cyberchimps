@@ -71,6 +71,20 @@
       <?php remove_filter( 'excerpt_length', 'cyberchimps_search_excerpt_length', 999 ); ?>
       <?php remove_filter( 'excerpt_more', 'cyberchimps_search_excerpt_more', 999 ); ?>
 		</div><!-- .entry-summary -->
+  
+   <?php elseif( is_archive() ): ?>
+  	<?php if( cyberchimps_option( 'archive_post_excerpts' ) ): ?>
+  		<div class="entry-summary">
+      	<?php cyberchimps_featured_image(); ?>
+        <?php the_excerpt(); ?>
+      </div>
+    <?php else: ?>
+    	<div class="entry-content">
+    		<?php cyberchimps_featured_image(); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+			</div><!-- .entry-content -->
+    <?php endif; ?>
 
 	<?php elseif( is_page() ): ?>
 		<div class="entry-summary">
@@ -78,11 +92,19 @@
 			<?php the_content(); ?>
 		</div><!-- .entry-summary -->
 	
-	<?php else : ?>
-  	<div class="entry-summary">
-    <?php cyberchimps_featured_image(); ?>
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
+	<?php else :// blog post pages ?>
+  	<?php if( cyberchimps_option( 'post_excerpts' ) ): ?>
+  		<div class="entry-summary">
+      	<?php cyberchimps_featured_image(); ?>
+        <?php the_excerpt(); ?>
+      </div>
+    <?php else: ?>
+    	<div class="entry-content">
+    		<?php cyberchimps_featured_image(); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+			</div><!-- .entry-content -->
+    <?php endif; ?>
 		
 	<?php endif; ?>
 
