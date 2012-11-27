@@ -72,8 +72,8 @@
 				<div class="menu-searchbar">
 					<?php get_search_form(); ?>
 				</div>
-			</div><!-- collapse -->
 			<?php endif; ?>
+			</div><!-- collapse -->
 			
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
