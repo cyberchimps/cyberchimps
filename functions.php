@@ -185,16 +185,6 @@ function cyberchimps_skin_color_options( $options ) {
 }
 add_filter( 'cyberchimps_skin_color', 'cyberchimps_skin_color_options' );
 
-//set default drag and drop blog options
-function cyberchimps_elements_draganddrop_defaults() {
-	$options = array( 
-									'slider_lite'			=> 'Slider Lite',
-									'blog_post_page' 	=> 'Post Page'
-									);
-	return $options;
-}
-add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_elements_draganddrop_defaults' );
-
 // theme specific background images
 function cyberchimps_background_image( $options ) {
 	$imagepath =  get_template_directory_uri() . '/cyberchimps/lib/images/';
