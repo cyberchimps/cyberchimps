@@ -65,7 +65,10 @@
       <div class="main-navigation navbar navbar-inverse">
         <div class="navbar-inner">
         	<div class="container">
+          	<?php /* hide collapsing menu if not responsive */
+						if( cyberchimps_option( 'responsive_design' ) ): ?>
   					<div class="nav-collapse collapse">
+            <?php endif; ?>
           		<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
 			
 			<?php if( cyberchimps_option( 'searchbar' ) == "1" ) : ?>
@@ -73,6 +76,8 @@
 					<?php get_search_form(); ?>
 				</div>
 			<?php endif; ?>
+      <?php /* hide collapsing menu if not responsive */
+			if( cyberchimps_option( 'responsive_design' ) ): ?>
 			</div><!-- collapse -->
 			
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -81,6 +86,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
+       <?php endif; ?>
           </div><!-- container -->
         </div><!-- .navbar-inner .row-fluid -->
       </div><!-- main-navigation navbar -->
