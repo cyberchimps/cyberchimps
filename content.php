@@ -29,7 +29,13 @@
 				// get the page title toggle option
 				 $page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true);
 				 
-				if( $page_title == "1" || $page_title == "" ) :
+				if( is_search() ):
+				?>
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
+					</a>
+				<?php	
+				elseif( $page_title == "1" || $page_title == "" ) :
 					( get_the_title() )? the_title() : the_permalink();
 				endif;
 			else :
@@ -58,7 +64,7 @@
   
 		<div class="entry-content">
     	<?php cyberchimps_featured_image(); ?>
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'cyberchimps' ) . '<span class="meta-nav">&rarr;</span>' ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		
@@ -73,7 +79,7 @@
 		</div><!-- .entry-summary -->
   
    <?php elseif( is_archive() ): ?>
-  	<?php if( cyberchimps_option( 'archive_post_excerpts' ) ): ?>
+  	<?php if( cyberchimps_get_option( 'archive_post_excerpts', 0 ) ): ?>
   		<div class="entry-summary">
       	<?php cyberchimps_featured_image(); ?>
         <?php the_excerpt(); ?>
@@ -81,7 +87,7 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
@@ -93,7 +99,7 @@
 		</div><!-- .entry-summary -->
 	
 	<?php else :// blog post pages ?>
-  	<?php if( cyberchimps_option( 'post_excerpts' ) ): ?>
+  	<?php if( cyberchimps_get_option( 'post_excerpts', 0 ) ): ?>
   		<div class="entry-summary">
       	<?php cyberchimps_featured_image(); ?>
         <?php the_excerpt(); ?>
@@ -101,7 +107,7 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
