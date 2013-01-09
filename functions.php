@@ -170,9 +170,12 @@ add_filter( 'cyberchimps_banner_img', 'cyberchimps_banner_default' );
 
 //theme specific skin options in array. Must always include option default
 function cyberchimps_skin_color_options( $options ) {
-	$options = array(  
-									'default' => __('Default', 'cyberchimps')
-							);
+	// Get path of image
+	$imagepath = get_template_directory_uri(). '/inc/css/skins/images/';
+	
+	$options = array(
+		'default'	=> $imagepath . 'default.png'
+	);		
 	return $options;
 }
 add_filter( 'cyberchimps_skin_color', 'cyberchimps_skin_color_options' );
