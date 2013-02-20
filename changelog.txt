@@ -2,7 +2,13 @@ CyberChimps Free Changelog
 
 ****************************
 
-Version 1.0.3 (1-25/13)
+Version 1.0.6 (2-14-13)
+-IE8 container fix.
+
+Version 1.0.5 (2-6-13)
+-Fix upload bug
+
+Version 1.0.3 (1-25-13)
 -Fix upload bug
 
 Version 1.0.2 (1-23-13)
