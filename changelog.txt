@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.0 (3-14-13)
+-Latest framework updates.
+
 Version 1.0.9 (3-8-13)
 -Latest framework updates.
 
