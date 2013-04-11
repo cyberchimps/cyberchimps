@@ -17,6 +17,12 @@
  
 get_header(); ?>
 
+<div id="error_page" class="container-full-width">
+	
+<div class="container">
+	
+<div class="container-fluid">
+
 <?php do_action( 'cyberchimps_before_container'); ?>
 
 <div id="container" <?php cyberchimps_filter_container_class(); ?>>
@@ -57,5 +63,11 @@ get_header(); ?>
 </div><!-- #container .row-fluid-->
 
 <?php do_action( 'cyberchimps_after_container'); ?>
+
+</div><!--container fluid -->
+
+</div><!-- container -->
+
+</div><!-- container full width -->
 
 <?php get_footer(); ?>
