@@ -43,9 +43,9 @@
 				
 					// get the post title toggle option
 					$post_title = cyberchimps_option( 'single_post_title' );
-					if( $post_title == "1" ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
-			<?php	endif;
+					if( $post_title == "1" ) : 
+						( get_the_title() )? the_title() : the_permalink();
+					endif;
 				else : ?>
 					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
 			<?php
