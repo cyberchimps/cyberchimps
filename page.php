@@ -25,7 +25,4 @@ get_header(); ?>
 
 <?php get_footer();
 
-function cyberchimps_page_display(){
-	
-}
 ?>
