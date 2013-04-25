@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.5 (4-26-13)
+-Replaced cyberchimps_option() with cyberchimps_get_option().
+
 Version 1.1.4 (4-19-13)
 -Removed elements using custom post type
 -Added boxes lite to theme and page options
