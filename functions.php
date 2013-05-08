@@ -131,7 +131,7 @@ function cyberchimps_options_support_forum() {
 }
 //Page Options Help URL
 function cyberchimps_options_page_options_help() {
-	$url = 'http://cyberchimps.com/responsepro/docs/';
+	$url = 'http://cyberchimps.com/element-how-tos/';
 	return $url;
 }
 // Slider Options Help URL
