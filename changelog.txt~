@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.6 (5-2-13)
+-Woocommerce layout fix
+
 Version 1.1.5 (4-26-13)
 -Replaced cyberchimps_option() with cyberchimps_get_option().
 
