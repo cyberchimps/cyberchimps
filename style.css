@@ -83,8 +83,9 @@ header #social .icons a {
 
 /*======================================= DETAILS =============================================*/
 
-header#cc-header h1.site-title {
-	margin-bottom: 5px;
+header#cc-header h2.site-title {
+  margin-bottom: 5px;
+  font-size: 38.5px
 }
 
 header#cc-header h2.site-description {
