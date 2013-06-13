@@ -2,6 +2,13 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.11 (6-6-13)
+-Updated meta in pot file.
+-Added updated class to the time tag in cyberchimps_posted_on() function.
+-Fixed custom css sanitization at php and js levels.
+-Updated woocommerce styling.
+-Improvedcomments schema for microformats
+
 Version 1.1.10 (5-30-13)
 -Removed modal welcome note on theme install.
 -Boxes - added filter for default number 
