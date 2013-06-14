@@ -36,7 +36,7 @@ get_header(); ?>
 					<?php if ( have_posts() ) : ?>
 			
 						<header class="page-header">
-							<h2 class="page-title">
+							<h1 class="page-title">
 								<?php
 									if ( is_category() ) {
 										printf( __( 'Category Archives: %s', 'cyberchimps' ), '<span>' . single_cat_title( '', false ) . '</span>' );
@@ -70,7 +70,7 @@ get_header(); ?>
 			
 									}
 								?>
-							</h2>
+							</h1>
 							<?php
 								if ( is_category() ) {
 									// show an optional category description
