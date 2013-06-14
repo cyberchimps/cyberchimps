@@ -22,7 +22,7 @@
 	<header class="entry-header">
 		
 		<?php cyberchimps_post_format_icon(); ?>
-		<h2 class="entry-title">
+		<h1 class="entry-title">
 			<?php
 			if ( 'page' == get_post_type() ) : 
 				
@@ -51,7 +51,7 @@
 			<?php
 				endif;
 			endif; ?>
-		</h2>
+		</h1>
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
