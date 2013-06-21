@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.13 (6-21-13)
+-Replaced headlines tags from h2 to h1 at required places.
+
 Version 1.1.12 (6-13-13)
 Removed the unused global variable from boxes.php.
 
