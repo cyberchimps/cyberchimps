@@ -2,6 +2,14 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.15 (7-4-13)
+-Removed twitter element.
+-Updated default images and icons.
+-Updated translation.
+-Added option to add title to blog page.
+-Updated carousel plugin.
+-Fixed YouTube video responsive issue.
+
 Version 1.1.14 (6-27-13)
 -Updated twitter API to v1.1
 
