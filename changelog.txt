@@ -2,6 +2,11 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.16 (7-11-13)
+- Added filters to widget titles.
+- Woocommerce - removed max-width.
+- Changed where the skin css gets added in the head.
+
 Version 1.1.15 (7-4-13)
 -Removed twitter element.
 -Updated default images and icons.
