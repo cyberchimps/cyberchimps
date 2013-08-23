@@ -2,6 +2,10 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.22 (8-23-13)
+- Social icons reordering.
+- Upsell page update: Updated screenshot and info of Neuro Pro.
+
 Version 1.1.21 (8-16-13)
 - Fixed heading typography.
 - Footer copyright - allow all html through.
