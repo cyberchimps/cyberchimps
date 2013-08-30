@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.23 (8-30-13)
+- Added new class for metabox options.
+
 Version 1.1.22 (8-23-13)
 - Social icons reordering.
 - Upsell page update: Updated screenshot and info of Neuro Pro.
