@@ -2,7 +2,11 @@ CyberChimps Free Changelog
 
 ****************************
 
-Version 1.1.25 (13-6-13)
+Version 1.1.26 (9-20-13)
+- Slider option from post is removed as it was not part of free themes.
+- Fixed google font issue.
+
+Version 1.1.25 (9-13-13)
 - Updated README file.
 
 Version 1.1.24 (9-6-13)
