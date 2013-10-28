@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.31 (10-28-13)
+- Slider lite ID separator change from (-) to(_). Changed affected JS and CSS.
+
 Version 1.1.30 (10-18-13)
 - Container width fix.
 - Added class cc-responsive if responisve design is on.
