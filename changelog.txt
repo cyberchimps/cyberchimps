@@ -2,7 +2,7 @@ CyberChimps Free Changelog
 
 ****************************
 
-Version 1.1.34 (11-8-13)
+Version 1.1.34 (11-11-13)
 - Translation domain fix.
 - Sanitization added to few metabox option types.
 - Js minification in core.
