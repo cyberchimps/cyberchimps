@@ -2,6 +2,11 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.35 (11-15-13)
+- Added new background image option.
+- Js minification for elements.
+- Translation update.
+
 Version 1.1.34 (11-11-13)
 - Translation domain fix.
 - Sanitization added to few metabox option types.
