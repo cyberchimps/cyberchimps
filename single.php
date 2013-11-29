@@ -21,8 +21,6 @@ get_header(); ?>
 
 		<div class="container">
 
-			<div class="container-fluid">
-
 				<?php do_action( 'cyberchimps_before_container' ); ?>
 
 				<div id="container" <?php cyberchimps_filter_container_class(); ?>>
@@ -38,11 +36,11 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'single' ); ?>
 
 							<div class="more-content">
-								<div class="row-fluid">
-									<div class="span6 previous-post">
+								<div class="row">
+									<div class="col-md-6 previous-post">
 										<?php previous_post_link(); ?>
 									</div>
-									<div class="span6 next-post">
+									<div class="col-md-6 next-post">
 										<?php next_post_link(); ?>
 									</div>
 								</div>
@@ -65,12 +63,9 @@ get_header(); ?>
 					<?php do_action( 'cyberchimps_after_content_container' ); ?>
 
 				</div>
-				<!-- #container .row-fluid-->
+				<!-- #container .row-->
 
 				<?php do_action( 'cyberchimps_after_container' ); ?>
-
-			</div>
-			<!--container fluid -->
 
 		</div>
 		<!-- container -->

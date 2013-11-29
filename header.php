@@ -56,10 +56,7 @@
 <div class="container-full-width" id="header_section">
 	<div class="container">
 		<?php do_action( 'cyberchimps_before_wrapper' ); ?>
-		<div class="container-fluid">
 			<?php do_action( 'cyberchimps_header' ); ?>
-		</div>
-		<!-- .container-fluid-->
 	</div>
 	<!-- .container -->
 </div>

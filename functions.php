@@ -93,11 +93,11 @@ endif; // ends check for cyberchimps_comment()
 function cyberchimps_next_previous_posts() {
 	if( get_next_posts_link() || get_previous_posts_link() ): ?>
 		<div class="more-content">
-			<div class="row-fluid">
-				<div class="span6 previous-post">
+			<div class="row">
+				<div class="col-md-6 previous-post">
 					<?php previous_posts_link(); ?>
 				</div>
-				<div class="span6 next-post">
+				<div class="col-md-6 next-post">
 					<?php next_posts_link(); ?>
 				</div>
 			</div>

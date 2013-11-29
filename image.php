@@ -21,8 +21,6 @@ get_header(); ?>
 
 		<div class="container">
 
-			<div class="container-fluid">
-
 				<?php do_action( 'cyberchimps_before_container' ); ?>
 
 				<div id="container" <?php cyberchimps_filter_container_class(); ?>>
@@ -122,8 +120,8 @@ get_header(); ?>
 									$first_url = isset( $attachments[0] ) ? get_permalink( $attachments[0] ) : false;
 									$last_url  = isset( $attachments[$k + 1] ) ? get_permalink( end( $attachments )->ID ) : get_permalink( $attachments[0]->ID );
 									?>
-									<div class="row-fluid gallery-pagination">
-										<div class="span6 previous-image">
+									<div class="row gallery-pagination">
+										<div class="col-md-6 previous-image">
 											<?php if( $previous_image == false && count( $attachments ) > 1 ): ?>
 												<a href="<?php echo $last_url; ?>"><?php echo wp_get_attachment_image( $last_image, 'thumbnail' ); ?></a>
 											<?php elseif( $previous_image != $post->ID ): ?>
@@ -132,7 +130,7 @@ get_header(); ?>
 										</div>
 										<!-- span6 -->
 
-										<div class="span6 next-image">
+										<div class="col-md-6 next-image">
 											<?php if( $next_image == false && count( $attachments > 1 ) ): ?>
 												<a href="<?php echo $first_url; ?>"><?php echo wp_get_attachment_image( $first_image, 'thumbnail' ); ?></a>
 											<?php elseif( $next_image != $post->ID ): ?>
@@ -140,7 +138,7 @@ get_header(); ?>
 											<?php endif; ?>
 										</div>
 										<!-- span6 -->
-									</div><!-- row fluid -->
+									</div><!-- row -->
 								<?php endforeach; ?>
 								<?php // HS END Thumbnail next and previous image ?>
 
@@ -174,12 +172,9 @@ get_header(); ?>
 					<?php do_action( 'cyberchimps_after_content_container' ); ?>
 
 				</div>
-				<!-- #container .row-fluid-->
+				<!-- #container .row-->
 
 				<?php do_action( 'cyberchimps_after_container' ); ?>
-
-			</div>
-			<!--container fluid -->
 
 		</div>
 		<!-- container -->

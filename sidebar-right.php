@@ -70,4 +70,4 @@
 
 	<?php do_action( 'cyberchimps_after_sidebar' ); ?>
 
-</div><!-- #secondary .widget-area .span3 -->
+</div><!-- #secondary .widget-area .col-md-3 -->
