@@ -827,7 +827,20 @@ h2.box-widget-title {
 
 /*==================================== SLIDER ======================================================*/
 
-#slider {
+#slider_lite .carousel-control {
+	border: 3px solid #FFFFFF;
+	border-radius: 50%;
+	font-size: 60px;
+	height: 40px;
+	left: 15px;
+	line-height: 24px;
+	top: 40%;
+	width: 40px;
+}
+
+#slider_lite .carousel-control.right {
+	left: auto;
+	right: 15px;
 }
 
 /*==================================== TWITTER =====================================================*/
