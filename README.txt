@@ -1,4 +1,4 @@
-Cyberchimps Free responsive Wordpress theme
+Cyberchimps Free responsive WordPress theme
 ====================================
 
 - Cyberchimps Free, Copyright 2013
