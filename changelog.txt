@@ -2,6 +2,10 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.38 (12-12-13)
+- Fixed social icon links.
+- Fixed metabox toggle option.
+
 Version 1.1.37 (12-11-13)
 - Added Font-Based Social Icons.
 - Integrated Font Awesome (Bootstrap font).
