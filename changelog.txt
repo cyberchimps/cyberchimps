@@ -2,6 +2,13 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.39 (12-16-13)
+- Email and google map icon issue fixed.
+- Social icon issue in IE fixed.
+- Added larger screenshot for WP3.8.
+- Update tags for WP3.8.
+- Updated license.
+
 Version 1.1.38 (12-12-13)
 - Fixed social icon links.
 - Fixed metabox toggle option.
