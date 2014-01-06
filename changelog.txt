@@ -2,6 +2,10 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.41 (1-6-14)
+- Modified Helvetica font-family.
+- Removed translation of a variable.
+
 Version 1.1.40 (12-23-13)
 - Fixed drag and drop font icons on page options.
 - Added metabox field type unfiltered_textarea.
