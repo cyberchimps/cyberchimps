@@ -2,6 +2,10 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.43 (1-21-14)
+- Email icon made not to open a new tab.
+- Removed Twitter bar from default option.
+
 Version 1.1.42 (1-14-14)
 - Changed blog layout option text.
 - Fixed upload button not working issue with child themes.
