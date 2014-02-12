@@ -15,6 +15,11 @@
  * @link     http://www.cyberchimps.com/
  */
 
+// Load text domain.
+function cyberchimps_text_domain() {
+	load_theme_textdomain( 'cyberchimps', get_template_directory() . '/inc/languages' );
+}
+
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
