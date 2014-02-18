@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.47 (2-18-14)
+- Slider is made to be start sliding on page load.
+
 Version 1.1.46 (2-11-14)
 - Updated Translation.
 
