@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.52 (3-27-14)
+- Updated Elements Translation.
+
 Version 1.1.51 (3-21-14)
 - Fixed IE8 compatibility issue.
 
