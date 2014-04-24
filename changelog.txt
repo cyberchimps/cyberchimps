@@ -2,6 +2,11 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.56 (4-24-14)
+- Added recommendation for clef plugin.
+- Updated translations.
+- Youtube video fixed.
+
 Version 1.1.55 (4-16-14)
 - Changed social font icons to font awesome.
 - Removed unwanted function_exists() conditional wrapper.
