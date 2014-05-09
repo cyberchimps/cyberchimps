@@ -2,6 +2,11 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.58 (5-9-14)
+- Fixed W3C validator error issue with IE compatibility meta tags.
+- Fixed missing image error: removed unused function.
+- Added FooBox as recommended plugin.
+
 Version 1.1.57 (5-2-14)
 - Fixed byline toggle issue. 
 
