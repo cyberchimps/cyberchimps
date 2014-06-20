@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.64 (6-20-14)
+- Code reformatting: Changed spaces to tabs.
+
 Version 1.1.63 (6-13-14)
 - Code reformatted: Changed spaces to tabs.
 
