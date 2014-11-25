@@ -2,6 +2,10 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.75 (11-25-14)
+- Removed theme activation notice.
+- Changed default links for slider.
+
 Version 1.1.74 (11-16-14)
 - Removed cyberchimps_mlu_init() as it has register_post_type() which is plugin-territory functionality.
 - Added sanitization to customizer options.
