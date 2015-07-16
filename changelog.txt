@@ -2,6 +2,9 @@ CyberChimps Free Changelog
 
 ****************************
 
+Version 1.1.80 (16-07-15)
+- Change in theme customizer as per wordpress.org guidelines
+
 Version 1.1.76 (1-23-15)
 - Fixed conflict between slider free and pro plugin.
 - Added new plugin suggestion.
