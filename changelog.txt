@@ -1,6 +1,9 @@
 CyberChimps Free Changelog
 
 ****************************
+Version 1.3 (10-12-16)
+- Fixed the display issue of searchbar and dropdown in sidebar.
+
 Version 1.2.0 (2-04-16)
 - Site font issue Fixed
 
