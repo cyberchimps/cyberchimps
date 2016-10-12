@@ -18,6 +18,7 @@
 // Load text domain.
 function cyberchimps_text_domain() {
 	load_theme_textdomain( 'cyberchimps', get_template_directory() . '/inc/languages' );
+	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
@@ -268,4 +269,5 @@ function cyberchimps_twitter_handle_filter() {
 }
 
 add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
+
 ?>
