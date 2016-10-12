@@ -18,6 +18,7 @@
 // Load text domain.
 function cyberchimps_text_domain() {
 	load_theme_textdomain( 'cyberchimps', get_template_directory() . '/inc/languages' );
+	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
@@ -268,4 +269,36 @@ function cyberchimps_twitter_handle_filter() {
 }
 
 add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
+
+/*Forum freshness*/
+function forum_display_latest($bbp_forum_query_have_posts, $bbp_forum_query ) { 
+if ( bbp_is_forum_archive() ) {
+		$default_post_parent = 0;
+
+	// User subscriptions shows any
+	} elseif ( bbp_is_subscriptions() ) {
+		$default_post_parent = 'any';
+
+	// Could be anything, so look for possible parent ID
+	} else {
+		$default_post_parent = bbp_get_forum_id();
+	}
+	$bbp_f = bbp_parse_args( $args, array(
+		'post_type'           => bbp_get_forum_post_type(),
+		'post_parent'         => $default_post_parent,
+		'post_status'         => bbp_get_public_status_id(),
+		'posts_per_page'      => get_option( '_bbp_forums_per_page', 50 ),
+		'ignore_sticky_posts' => true,
+		'order'               => 'DESC',
+		'meta_key'			  => '_bbp_last_active_time',
+		'orderby'             => 'meta_value',
+	), 'has_forums' );
+
+
+	// Run the query
+	$bbp              = bbpress();
+	$bbp->forum_query = new WP_Query( $bbp_f );
+return $bbp_forum_query_have_posts;
+}
+add_filter('bbp_has_forums','forum_display_latest',10,2);
 ?>
