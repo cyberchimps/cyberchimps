@@ -21,6 +21,23 @@ function cyberchimps_text_domain() {
 }
 add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
+//handle backwards compatibility
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+	function theme_slug_render_title() {
+?>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php
+	}
+	add_action( 'wp_head', 'theme_slug_render_title' );
+}
+
+// enabling theme support for title tag
+function cyberchimps_setup() 
+{
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'cyberchimps_setup' );
+
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
