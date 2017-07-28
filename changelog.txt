@@ -1,6 +1,9 @@
 CyberChimps Free Changelog
 
 ****************************
+Version 1.5 (07-28-17)
+- Added visible edit links in the customizer preview
+
 Version 1.4 (04-27-17)
 - Fixed issue with PHP version 7.1
 
