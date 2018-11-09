@@ -3,8 +3,8 @@ Theme Name: CyberChimps
 Theme URI: http://cyberchimps.com/cyberchimps-free/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
-Description: A Free HTML5 Responsive Drag & Drop Starter WordPress Theme by CyberChimps WordPress Themes featuring Twitter Bootstrap, and responsive touch friendly theme options. CyberChimps Free has visible edit links in the customizer preview. For Support - <a href="https://cyberchimps.com/forum/free/cyberchimps/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/cyberchimps/).
-Version: 1.5
+Description: A Free HTML5 Responsive Drag , Drop Starter WordPress and Gutenberg compatible Theme by CyberChimps WordPress Themes featuring Twitter Bootstrap, and responsive touch friendly theme options. CyberChimps Free has visible edit links in the customizer preview. For Support - <a href="https://cyberchimps.com/forum/free/cyberchimps/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/cyberchimps/).
+Version: 1.6
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, flexible-header, post-formats, theme-options, sticky-post, blog, threaded-comments, custom-logo, footer-widgets
 Text Domain: cyberchimps
 License: GNU General Public License version 3
@@ -911,4 +911,218 @@ h2.box-widget-title {
 }
 select{
 	width:100%;
+}
+
+.site-title, .box-widget-title, .entry-title, .widget-title, .recent_posts_post_title,
+#callout_section_section, .carousel_caption, .cyberchimps-product-title, .respond-title, .comments-title, #portfolio_pro_section h2, #cyberchimps_testimonial_top h2, #contact_us h2 {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+/*============= Testimonial ==========*/
+
+.cyberchimps_main_title{
+      margin-top: 80px;
+      text-align: center;
+      font-size: 1.8em;
+  }
+  ul.slides {
+      margin-left: 0;
+  }
+  .flexslider .slides > li {
+    display: block;
+    -webkit-backface-visibility: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ 	.slides.cyberchimps_carousel {
+    max-width: 100%;
+    display: inline-block;
+    padding-top: 20px;
+    width: auto !important;
+}
+ 	#testimonial_section .cyberchimps_short_desc {
+      margin-top: 80px;
+}
+#testimonial_section {
+background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; }
+#testimonial_section .img-responsive {
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  border: 5px solid #fff; }
+#testimonial_section .flexslider {
+  background: transparent;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+#testimonial_section .cyberchimps_slider_text_img {
+  color: #fff; }
+  #testimonial_section .cyberchimps_slider_text_img li {
+    width: auto;
+    text-align: center;
+}
+ #testimonial_section .cyberchimps_testimonial_author {
+  font-weight: 600;
+  font-size: 1.125em; }
+#testimonial_section .cyberchimps_testimonial_abt_author {
+  font-weight: 500;
+  margin-bottom: 12%; }
+#testimonial_section .after_testimonial_text {
+  margin: 25px auto;
+  padding: 0;
+  max-width: 84px;
+  border: 0;
+  border-top: solid 2px #cd834a;
+  text-align: center;
+  background: transparent; }
+#testimonial_section #carousel2.flexslider {
+  position: absolute;
+  bottom: -20%; }
+#testimonial_section .flex-active-slide img {
+  border-color: #cd834a; }
+#testimonial_section .flex-active-slide .arrow-top {
+  position: absolute;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e14c3d;
+  border-left: 10px solid transparent;
+  top: 12px;
+  left: 13%; }
+#testimonial_section .flex-viewport {
+  text-align: center; }
+testimonial_section .flexslider .slides {
+  padding-bottom: 30px; }
+ #testimonial_section{
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+}
+.cyberchimps_main_title{
+    margin-top: 80px;
+    text-align: center;
+}
+.flex-direction-nav{
+    display: none;
+}
+	/* =============================== Contact Section  ========================== */
+.contactus_wrapper{
+    padding: 0 0 3% 0;
+    color: #fff;
+	}
+.contactus_wrapper.span12
+{
+     margin: 0 auto;
+}
+#contact_us input[type="text"], #contact_us textarea{
+    width: 96%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+	}
+.contact_left_sec{
+    font-size: 16px;
+    line-height: 1.8;
+}
+.fa
+{
+    font-size: 30px;
+}
+.contact_right_sec input[type="submit"]
+{
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #cd834a 0%, #9e663d 100%) repeat scroll 0 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: lobster,cursive;
+    font-size: 17.5px;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 55px;
+    margin: 2% 32%;
+	}
+.contact_title{
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 1.8em;
+}
+	@media all and (max-width: 767px) {
+    .contact_left_sec
+    {
+        text-align: center;
+    }
+    .contactus_wrapper.span12
+    {
+        padding: 20px 30px;
+    }
+    .contact_addr {
+    padding-bottom: 10px;
+    }
+    .cyberchimps_testimonial_text{
+    padding: 0 20px;
+    }
+}
+/* ========================== Contact details in header  =========================== */
+.contact_details{
+    font-family: lobster,cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.contact_details:before{
+    font-family: "FontAwesome";
+    content: "\f095";
+}
+#register
+{
+    padding: 12px 0 0 0;
+}
+
+/* ========================== Contact details in header end  =========================== */
+
+.entry-content ol,
+.entry-content ul,
+.entry-summary ol,
+.entry-summary ul{
+	margin-left: 2.9em;
+}
+
+.entry-content ol.wp-block-gallery,
+.entry-content ul.wp-block-gallery,
+.entry-summary ol.wp-block-gallery,
+.entry-summary ul.wp-block-gallery {
+	display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+	audio, canvas, video {
+    display: inline-block;
+    width: 100%;
+}
+	.wp-block-column p {
+    padding: 0 14px;
+}
+	.wp-block-gallery .blocks-gallery-item figcaption {
+        padding: 40px 0;
+}
+div.wp-block-cover .wp-block-cover-text{
+ 	position: absolute;
+    color: #fff;
+    font-size: 2em;
+    line-height: 1.25;
+    margin-bottom: 0;
+    max-width: 610px;
+    padding: 14px;
+    text-align: center;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+div.wp-block-cover.aligncenter {
+	clear: both;
 }

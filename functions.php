@@ -31,16 +31,25 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 	add_action( 'wp_head', 'theme_slug_render_title' );
 }
 
-// enabling theme support for title tag
-function cyberchimps_setup()
-{
+/**
+ * [cyberchimps_setup description]
+ *
+ * @return void.
+ */
+function cyberchimps_setup() {
+	// enabling theme support for title tag.
 	add_theme_support( 'title-tag' );
+
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+
 }
 add_action( 'after_setup_theme', 'cyberchimps_setup' );
 
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 require( get_template_directory() . '/inc/admin-about.php' );
+require_once( get_template_directory() . '/inc/testimonial_template.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if( !isset( $content_width ) ) {
@@ -405,3 +414,33 @@ function cyberchimps_admin_notices()
 	}
 
 }
+
+
+/**
+ *  Enqueue block styles  in editor
+ */
+function ifeature_block_styles() {
+	wp_enqueue_style( 'ifeature-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+}
+add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
+
+/**
+ * [cyberchimps_enqueue description]
+ *
+ * @return void
+ */
+function cyberchimps_enqueue() {
+	$directory_uri = get_template_directory_uri();
+	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'cyberchimps_enqueue' );
+
+/**
+ * [cyberchimps_set_defaults description]
+ */
+function cyberchimps_set_defaults()
+{
+ 	remove_action('testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ));
+	add_action('testimonial', 'cyberchimps_testimonial_render_display');
+}
+add_action( 'init', 'cyberchimps_set_defaults' );
