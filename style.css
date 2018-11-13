@@ -36,7 +36,7 @@ tr {
 }
 
 td {
-	padding: 5px 20px;
+    padding: 10px;
 }
 
 dt {
@@ -667,6 +667,10 @@ table#wp-calendar td {
 .site-footer #copyright {
 	text-align: right;
 	margin-bottom: 20px;
+}
+
+.site-footer.row-fluid{
+	display: flex;
 }
 
 /********************************************************************************************************************/

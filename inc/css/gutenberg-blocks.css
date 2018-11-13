@@ -414,4 +414,8 @@ figcaption.editor-rich-text__tinymce.mce-content-body {
 
 .gutenberg .wp-block-more{
 	text-align: center;
+	margin-left: 12%;
+}
+.block-editor .wp-block-more:before{
+	display: none;
 }
