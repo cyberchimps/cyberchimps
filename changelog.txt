@@ -1,6 +1,10 @@
 CyberChimps Free Changelog
 
 ****************************
+Version 1.6 (11-14-18)
+- Added testimonials and contact us elements
+- Added gutenberg compatibility
+
 Version 1.5 (07-28-17)
 - Added visible edit links in the customizer preview
 
@@ -92,7 +96,7 @@ Version 1.1.58 (5-9-14)
 - Added FooBox as recommended plugin.
 
 Version 1.1.57 (5-2-14)
-- Fixed byline toggle issue. 
+- Fixed byline toggle issue.
 
 Version 1.1.56 (4-24-14)
 - Added recommendation for clef plugin.
@@ -305,7 +309,7 @@ Version 1.1.11 (6-6-13)
 
 Version 1.1.10 (5-30-13)
 -Removed modal welcome note on theme install.
--Boxes - added filter for default number 
+-Boxes - added filter for default number
 
 Version 1.1.9 (5-23-13)
 -Added function cyberchimps_posted_by() to display author link.
