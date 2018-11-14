@@ -1,7 +1,7 @@
 CyberChimps Free Changelog
 
 ****************************
-Version 1.6 (11-09-18)
+Version 1.6 (11-14-18)
 - Added testimonials and contact us elements
 - Added gutenberg compatibility
 

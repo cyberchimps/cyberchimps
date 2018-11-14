@@ -419,10 +419,10 @@ function cyberchimps_admin_notices()
 /**
  *  Enqueue block styles  in editor
  */
-function ifeature_block_styles() {
-	wp_enqueue_style( 'ifeature-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+function cyberchimps_block_styles() {
+	wp_enqueue_style( 'cyberchimps-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 }
-add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
+add_action( 'enqueue_block_editor_assets', 'cyberchimps_block_styles' );
 
 /**
  * [cyberchimps_enqueue description]
